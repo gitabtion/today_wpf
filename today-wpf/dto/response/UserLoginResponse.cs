@@ -11,7 +11,5 @@ namespace today_wpf.dto.response
     {
         public String token { get; set; }
         public User user { get; set; }
-        
-      
     }
 }

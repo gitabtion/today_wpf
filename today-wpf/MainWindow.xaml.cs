@@ -31,8 +31,21 @@ namespace today_wpf
         {
             UserLoginRequest userLoginRequest = new UserLoginRequest(txtUserName.Text, txtPassword.Password);
             RestfulClient<UserLoginResponse> restful = new RestfulClient<UserLoginResponse>(userLoginRequest);
-            UserLoginResponse response = restful.response;
-            Console.WriteLine(response.token);
+            restful.Send();
+            UserLoginResponse response = restful.GetResponse();
+
+            if (response != null)
+                Console.WriteLine(response.token);
+
+            RestfulClient<CalendarDetailResponse> restfulGet = new RestfulClient<CalendarDetailResponse>("/calendar/{calendarId}/detail");
+
+            restfulGet.AddUrlSegment("calendarId",3);
+           
+            restfulGet.Send();
+
+            CalendarDetailResponse calendarDetail = restfulGet.GetResponse();
+            if (calendarDetail != null)
+                Console.WriteLine(calendarDetail.creatorName);
 
         }
 

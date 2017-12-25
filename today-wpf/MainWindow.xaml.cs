@@ -22,10 +22,14 @@ namespace today_wpf
     public partial class MainWindow : MetroWindow
     {
         private static MainWindow singleInstance;
+
+
+        //界面被初始化才能显示
         public MainWindow()
         {
             InitNotfyIconMenu();
             InitializeComponent();
+            singleInstance = this;
         }
         private static readonly object locker = new object();
         public static MainWindow GetInstance()
@@ -42,7 +46,7 @@ namespace today_wpf
                     }
                 }
             }
-            return singleInstance   ;
+            return singleInstance;
         }
         public System.Windows.Forms.NotifyIcon notifyIcon = new System.Windows.Forms.NotifyIcon();
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
@@ -147,7 +151,7 @@ namespace today_wpf
             UserLoginResponse response =await restful.GetResponse();
 
             if (response != null)
-                Console.WriteLine(response.token);
+                ShowSystemNotice("Today", "登录成功，欢迎" + response.user.name, 10);
             
             /**
             RestfulClient<CalendarDetailResponse> restfulGet = new RestfulClient<CalendarDetailResponse>("/calendar/{calendarId}/detail");

@@ -8,72 +8,14 @@ namespace today_wpf.model
 {
     class User
     {
-        private String name;
-        private String signature;
-        private String avatar;
-        private int sex;
-        private long createdAt;
-        private long updatedAt;
+        public String name { get; set; }
+        public String signature { get; set; }
+        public String avatar { get; set; }
+        public int sex { get; set; }
+        public long createdAt { get; set; }
+        public long updatedAt { get; set; }
 
-        public String getAvatar()
-        {
-            return avatar;
-        }
 
-        public void setAvatar(String avatar)
-        {
-            this.avatar = avatar;
-        }
-
-        public String getName()
-        {
-            return name;
-        }
-
-        public void setName(String name)
-        {
-            this.name = name;
-        }
-
-        public String getSignature()
-        {
-            return signature;
-        }
-
-        public void setSignature(String signature)
-        {
-            this.signature = signature;
-        }
-
-        public int getSex()
-        {
-            return sex;
-        }
-
-        public void setSex(int sex)
-        {
-            this.sex = sex;
-        }
-
-        public long getCreatedAt()
-        {
-            return createdAt;
-        }
-
-        public void setCreatedAt(long createdAt)
-        {
-            this.createdAt = createdAt;
-        }
-
-        public long getUpdatedAt()
-        {
-            return updatedAt;
-        }
-
-        public void setUpdatedAt(long updatedAt)
-        {
-            this.updatedAt = updatedAt;
-        }
     }
 }
 

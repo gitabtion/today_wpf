@@ -1,16 +1,14 @@
 ﻿using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using today_wpf.dto.request;
 using today_wpf.dto.response;
-
+using today_wpf;
 namespace today_wpf.network
 {
-    class RestfulClient<T>
+    class RestfulClient<T>:IDisposable
     {
+        
         private T response;
         private RestRequest request;
         private RestClient client;
@@ -43,19 +41,36 @@ namespace today_wpf.network
             this.request.AddUrlSegment(key, value);
         }
 
-        public T GetResponse()
+        public void Dispose()
         {
-            if(responseO.IsSuccessful == false)
+            GC.SuppressFinalize(this);
+        }
+
+        public async Task<T> GetResponse()
+        {
+            request.AddHeader("token", "d07d3d8943404b36b1a029f0e0a9d10e");
+            try
             {
-                throw new Exception();
-               
+                this.responseO = await client.ExecuteTaskAsync<BaseResponse<T>>(request);
+            }
+            catch (Exception e)
+            {
+
+                ShowSystemNotice("请求失败", "网络异常", 2);
+                return default(T);
+            }
+
+            if (responseO.IsSuccessful == false)
+            {
+                 ShowSystemNotice("请求失败", "服务器异常", 2);
+                return default(T);
             }
             else
             {
                 if(responseO.Data.code != 0)
                 {
-                    //toast
-                    Console.WriteLine(responseO.Data.message);
+                   
+                    ShowSystemNotice("请求失败", responseO.Data.message, 2);
                     return default(T);
                 }
             }
@@ -64,19 +79,19 @@ namespace today_wpf.network
             return this.response;
         }
 
-        public void Send()
+       
+        private void ShowSystemNotice(string title, string content, int timeOut)
         {
-            request.AddHeader("token", "d07d3d8943404b36b1a029f0e0a9d10e");
-            try
-            {
-            this.responseO = client.Execute<BaseResponse<T>>(request);
-            }
-            catch(Exception e)
-            {
-
-                //toast
-                Console.WriteLine();
-            }
+            MainWindow mainWindow = MainWindow.GetInstance();
+           
+            
+            
+            mainWindow.notifyIcon.BalloonTipTitle = title;
+            mainWindow.notifyIcon.BalloonTipText = content;
+            mainWindow.notifyIcon.ShowBalloonTip(timeOut);
+            
+          
+           
            
         }
     }

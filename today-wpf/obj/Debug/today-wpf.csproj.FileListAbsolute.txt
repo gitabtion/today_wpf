@@ -94,3 +94,7 @@ D:\vsproject\新建文件夹\today-wpf\obj\Debug\today-wpf.csproj.GenerateResour
 D:\vsproject\新建文件夹\today-wpf\obj\Debug\today-wpf.csproj.CoreCompileInputs.cache
 D:\vsproject\新建文件夹\today-wpf\obj\Debug\today-wpf.exe
 D:\vsproject\新建文件夹\today-wpf\obj\Debug\today-wpf.pdb
+D:\vsproject\新建文件夹\today-wpf\obj\Debug\Resources\Icons.baml
+D:\vsproject\新建文件夹\today-wpf\obj\Debug\Resources\IconsNonShared.baml
+D:\vsproject\新建文件夹\today-wpf\obj\Debug\resource\NotifyIcon.g.cs
+D:\vsproject\新建文件夹\today-wpf\obj\Debug\resource\NotifyIcon.baml

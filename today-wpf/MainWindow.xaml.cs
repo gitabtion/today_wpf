@@ -183,9 +183,8 @@ namespace today_wpf
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-
             window.Source = new Uri("Register.xaml", UriKind.Relative);
-
+            new Detail().Show();
             window.Show();
         }
     }

@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace today_wpf
+namespace today_wpf.detail
 {
     /// <summary>
-    /// Register.xaml 的交互逻辑
+    /// CommentWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class Register : Page
+    public partial class CommentWindow : UserControl
     {
-        public Register()
+        public CommentWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

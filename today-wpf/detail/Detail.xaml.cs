@@ -12,20 +12,29 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MahApps.Metro.Controls;
+using RestSharp;
+using today_wpf.dto.request;
+using today_wpf.dto.response;
+using today_wpf.network;
 namespace today_wpf
 {
     /// <summary>
-    /// Register.xaml 的交互逻辑
+    /// Page1.xaml 的交互逻辑
     /// </summary>
-    public partial class Register : Page
+    public partial class Detail: MetroWindow
     {
-        public Register()
+        public Detail()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_comment_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_detail_Click(object sender, RoutedEventArgs e)
         {
 
         }

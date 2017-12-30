@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,22 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
+using RestSharp;
+using today_wpf.dto.request;
+using today_wpf.dto.response;
+using today_wpf.network;
 
 namespace today_wpf
 {
-    /// <summary>
-    /// Register.xaml 的交互逻辑
-    /// </summary>
-    public partial class Register : Page
+    public partial class CalendarPage : MetroWindow
     {
-        public Register()
-        {
-            InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public CalendarPage()
         {
 
         }
+
     }
 }

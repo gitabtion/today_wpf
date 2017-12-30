@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\YZ\Desktop\622896.jpg"/>
+            <ImageBrush ImageSource=".\resource\622896.jpg"/>
         </Grid.Background>
 
     </Grid>

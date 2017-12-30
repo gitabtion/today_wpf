@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace today_wpf
 {
     /// <summary>
-    /// Register.xaml 的交互逻辑
+    /// DetailWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class Register : Page
+    public partial class DetailWindow : UserControl
     {
-        public Register()
+        public DetailWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

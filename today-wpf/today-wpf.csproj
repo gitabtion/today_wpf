@@ -174,12 +174,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CalendarPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Compile Include="CalendarPage.xaml.cs">
-      <DependentUpon>CalendarPage.xaml</DependentUpon>
+    <Compile Include="pages\TodayControl.xaml.cs">
+      <DependentUpon>TodayControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="detail\CommentWindow.xaml.cs">
       <DependentUpon>CommentWindow.xaml</DependentUpon>
@@ -192,6 +188,9 @@
     <Compile Include="dto\request\UserLoginRequest.cs" />
     <Compile Include="dto\response\BaseResponse.cs" />
     <Compile Include="dto\response\UserLoginResponse.cs" />
+    <Compile Include="main\MasterWindow.xaml.cs">
+      <DependentUpon>MasterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="model\User.cs" />
     <Compile Include="network\RestfulClient.cs" />
     <Compile Include="detail\Detail.xaml.cs">
@@ -200,6 +199,10 @@
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Page Include="pages\TodayControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="detail\CommentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -221,6 +224,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="detail\Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="main\MasterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

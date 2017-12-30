@@ -17,6 +17,7 @@ using RestSharp;
 using today_wpf.dto.request;
 using today_wpf.dto.response;
 using today_wpf.network;
+using today_wpf.main;
 namespace today_wpf
 {
     public partial class MainWindow : MetroWindow
@@ -151,7 +152,10 @@ namespace today_wpf
             UserLoginResponse response =await restful.GetResponse();
 
             if (response != null)
+            {
                 ShowSystemNotice("Today", "登录成功，欢迎" + response.user.name, 10);
+                new MasterWindow().Show();   
+            }
             
             /**
             RestfulClient<CalendarDetailResponse> restfulGet = new RestfulClient<CalendarDetailResponse>("/calendar/{calendarId}/detail");

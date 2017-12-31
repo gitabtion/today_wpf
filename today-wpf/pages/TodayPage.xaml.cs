@@ -27,7 +27,10 @@ namespace today_wpf.pages
             CalendarActivity act2 = new CalendarActivity("fff", "ALL Failed");
             this.GoodList.Items.Add(act);
             this.GoodList.Items.Add(act2);
-  
+            CalendarActivity bact = new CalendarActivity("使用ie", "你将痛苦无比");
+            CalendarActivity bact2 = new CalendarActivity("锻炼身体","不深骨折");
+            this.BadList.Items.Add(bact);
+            this.BadList.Items.Add(bact2);
         }
     }
 }

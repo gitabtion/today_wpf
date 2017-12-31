@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Pages="clr-namespace:today_wpf.pages"
         mc:Ignorable="d"
-        Title="MasterWindow" Height="616.667" Width="1056">
+        Title="MasterWindow" Height="616.667" Width="1056"> 
     <Controls:MetroContentControl>
         <Grid>
             <Grid HorizontalAlignment="Left" Height="587" VerticalAlignment="Top" Width="127" Background="#FFD2D1D1">
@@ -19,6 +19,7 @@
             <Grid Name="container" HorizontalAlignment="Left" Height="587" Margin="127,0,0,0" VerticalAlignment="Top" Width="922" Background="#FFF9F9F9">
                 <!--每日黄历页面-->
                 <Pages:TodayPage></Pages:TodayPage>
+                <Pages:DetailPage x:Name="detail_page" />
             </Grid>
         </Grid>
     </Controls:MetroContentControl>

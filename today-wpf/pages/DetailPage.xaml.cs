@@ -12,31 +12,29 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
-using RestSharp;
-using today_wpf.dto.request;
-using today_wpf.dto.response;
-using today_wpf.network;
-namespace today_wpf
+
+namespace today_wpf.pages
 {
     /// <summary>
-    /// Page1.xaml 的交互逻辑
+    /// DetailPage.xaml 的交互逻辑
     /// </summary>
-    public partial class Detail: MetroWindow
+    public partial class DetailPage : UserControl
     {
-        public Detail()
+        public DetailPage()
         {
             InitializeComponent();
         }
 
-        private void btn_comment_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btn_detail_Click(object sender, RoutedEventArgs e)
         {
+            today_page.Visibility = Visibility.Visible;
+            comment_page.Visibility = Visibility.Hidden;
+        }
 
+        private void btn_comment_Click(object sender, RoutedEventArgs e)
+        {
+            today_page.Visibility = Visibility.Hidden;
+            comment_page.Visibility = Visibility.Visible;
         }
     }
 }

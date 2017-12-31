@@ -27,6 +27,7 @@ namespace today_wpf.main
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            detail_page.Visibility = Visibility.Visible;
         }
     }
 }

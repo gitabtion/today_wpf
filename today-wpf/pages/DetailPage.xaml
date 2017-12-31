@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="today_wpf.pages.DetailPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:today_wpf.pages"
+             mc:Ignorable="d" 
+             Height="562.6" Width="900.4">
+    <Grid HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="912" Background="#FFF6F6F6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="263*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" Height="160" Margin="18,42,0,0" VerticalAlignment="Top" Width="214" Source="/today-wpf;component/resource/622896.jpg" RenderTransformOrigin="0.689,0.655" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.178"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="标题" HorizontalAlignment="Left" Margin="247,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.161,0.158" Height="36" Width="62" FontSize="20"/>
+        <Label Content="作者" HorizontalAlignment="Left" Margin="247,166,0,0" VerticalAlignment="Top" Height="47" Width="66" FontSize="20"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="319,138,0,0" VerticalAlignment="Top" Height="32" Width="57"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="319,175,0,0" VerticalAlignment="Top" Height="28" Width="54"/>
+        <Border BorderBrush="Red" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="5,263,-2,0" VerticalAlignment="Top" Width="909" Background="Red" Grid.RowSpan="2"/>
+        <Button Content="详情" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Width="119" Name="btn_detail" Click="btn_detail_Click" />
+        <Grid Height="300" Margin="5,5.8,-2,-300.2" VerticalAlignment="Top" Grid.Row="1">
+            <local:TodayPage x:Name="today_page" Width="Auto" Height="Auto" Margin="-10,-1,10,0"/>
+            <local:CommentPage x:Name="comment_page" Margin="4,0,10,0" />
+        </Grid>
+        <Button Content="评论" HorizontalAlignment="Left" Margin="131,232,0,0" VerticalAlignment="Top" Width="119" x:Name="btn_comment" Click="btn_comment_Click" />
+    </Grid>
+</UserControl>

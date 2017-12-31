@@ -13,16 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace today_wpf.detail
+namespace today_wpf.pages
 {
     /// <summary>
-    /// CommentWindow.xaml 的交互逻辑
+    /// CommentPage.xaml 的交互逻辑
     /// </summary>
-    public partial class CommentWindow : UserControl
+    public partial class CommentPage : UserControl
     {
-        public CommentWindow()
+        public CommentPage()
         {
             InitializeComponent();
+
+            lv_comment.Items.Add(new CommentItem());
+            lv_comment.Items.Add(new CommentItem());
+            lv_comment.Items.Add(new CommentItem());
+            lv_comment.Items.Add(new CommentItem());
+
+
         }
     }
 }

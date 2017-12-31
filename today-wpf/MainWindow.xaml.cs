@@ -188,7 +188,6 @@ namespace today_wpf
         {
             NavigationWindow window = new NavigationWindow();
             window.Source = new Uri("Register.xaml", UriKind.Relative);
-            new Detail().Show();
             window.Show();
         }
     }

@@ -13,14 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace today_wpf
+namespace today_wpf.pages
 {
     /// <summary>
-    /// DetailWindow.xaml 的交互逻辑
+    /// CommentItem.xaml 的交互逻辑
     /// </summary>
-    public partial class DetailWindow : UserControl
+    public partial class CommentItem : UserControl
     {
-        public DetailWindow()
+        public CommentItem(string name ,string avatar,string content,string data) 
+        {
+
+            InitializeComponent();
+     
+            tv_content.Content = content;
+            tv_data .Content= data;
+            tv_name.Content = name; 
+        }
+        public CommentItem()
         {
             InitializeComponent();
         }

@@ -174,12 +174,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="detail\CommentWindow.xaml.cs">
-      <DependentUpon>CommentWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="detail\DetailWindow.xaml.cs">
-      <DependentUpon>DetailWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Env.cs" />
     <Compile Include="dto\request\BaseRequest.cs" />
     <Compile Include="dto\request\UserLoginRequest.cs" />
@@ -190,8 +184,14 @@
     </Compile>
     <Compile Include="model\User.cs" />
     <Compile Include="network\RestfulClient.cs" />
-    <Compile Include="detail\Detail.xaml.cs">
-      <DependentUpon>Detail.xaml</DependentUpon>
+    <Compile Include="pages\CommentItem.xaml.cs">
+      <DependentUpon>CommentItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\CommentPage.xaml.cs">
+      <DependentUpon>CommentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DetailPage.xaml.cs">
+      <DependentUpon>DetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\TodayPage.xaml.cs">
       <DependentUpon>TodayPage.xaml</DependentUpon>
@@ -199,14 +199,6 @@
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
-    <Page Include="detail\CommentWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="detail\DetailWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -219,11 +211,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="detail\Detail.xaml">
+    <Page Include="main\MasterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="main\MasterWindow.xaml">
+    <Page Include="pages\CommentItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\CommentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

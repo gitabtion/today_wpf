@@ -31,6 +31,10 @@ namespace today_wpf.pages
             CalendarActivity bact2 = new CalendarActivity("锻炼身体","不深骨折");
             this.BadList.Items.Add(bact);
             this.BadList.Items.Add(bact2);
+            CalendarItem it = new CalendarItem("今日宜吃","汉堡 可乐 炸鸡");
+            CalendarItem it2 = new CalendarItem("今日宜饮","果汁 汽水 白开水");
+            this.ItemList.Items.Add(it);
+            this.ItemList.Items.Add(it2);
         }
     }
 }

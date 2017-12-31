@@ -4,8 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:today_wpf.pages"
-             mc:Ignorable="d" Height="494.737" Width="548.583">
-    <Grid>
-            
+             mc:Ignorable="d" Height="530" Width="810">
+    <Grid Margin="0,0,0,-34" Height="530">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="291*"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="530" Grid.Row="1" VerticalAlignment="Top" Width="422">
+            <Image HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="421" Source="/today-wpf;component/resource/head.jpg" Stretch="Fill"/>
+            <Grid HorizontalAlignment="Left" Height="110" Margin="0,420,0,0" VerticalAlignment="Top" Width="421" Background="#FF197FAB">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="360*"/>
+                    <ColumnDefinition Width="61*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="程序员老黄历" HorizontalAlignment="Left" Margin="121,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24"/>
+                <Label Content="2017-12-30 Sat" HorizontalAlignment="Left" Margin="133,41,0,0" VerticalAlignment="Top" Foreground="#FFFEFEFE" FontSize="16" Height="34" Width="142"/>
+                <Button Content="&lt;" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="26" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16"/>
+                <Button Content="&gt;" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="26" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Grid.Column="1"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="498" Margin="421,0,-384,0" VerticalAlignment="Top" Width="385" Background="#FFF1F1F1">
+                <Label Content="Today" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Height="36" Width="155" FontSize="24" FontFamily="Impact" FontWeight="{DynamicResource {x:Static SystemFonts.IconFontWeightKey}}"/>
+                <Label Content="You'd Better.." HorizontalAlignment="Left" Margin="26,64,0,0" VerticalAlignment="Top" Height="36" Width="155" FontSize="20" FontFamily="Impact"/>
+                <ListView x:Name="GoodList" HorizontalAlignment="Left" Height="279" Margin="41,105,0,0" VerticalAlignment="Top" Width="318" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                            
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </Grid>
+
     </Grid>
 </UserControl>

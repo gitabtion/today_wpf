@@ -16,18 +16,20 @@ using System.Windows.Shapes;
 namespace today_wpf.pages
 {
     /// <summary>
-    /// TodayPage.xaml 的交互逻辑
+    /// CalendarActivity.xaml 的交互逻辑
     /// </summary>
-    public partial class TodayPage : UserControl
+    public partial class CalendarActivity : UserControl
     {
-        public TodayPage()
+        public CalendarActivity(String name,String detail)
         {
             InitializeComponent();
-            CalendarActivity act = new CalendarActivity("打游戏", "ALL Failed");
-            CalendarActivity act2 = new CalendarActivity("fff", "ALL Failed");
-            this.GoodList.Items.Add(act);
-            this.GoodList.Items.Add(act2);
-  
+            this.activityName.Content = name;
+            this.activityDtail.Content = detail;
+        }
+
+        public CalendarActivity()
+        {
+            InitializeComponent();
         }
     }
 }

@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="today_wpf.pages.CalendarActivity"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:today_wpf.pages"
+             mc:Ignorable="d" Height="70.851" Width="273.279">
+    <Grid>
+        <Label x:Name="activityName" Content="Label" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="16" Width="74" FontWeight="Bold"/>
+        <Label x:Name="activityDtail" Content="Label" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="253" Foreground="#FF7D6D6D"/>
+
+    </Grid>
+</UserControl>

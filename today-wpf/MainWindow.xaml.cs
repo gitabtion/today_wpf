@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -151,22 +154,18 @@ namespace today_wpf
             UserLoginResponse response =await restful.GetResponse();
 
             if (response != null)
-                ShowSystemNotice("Today", "登录成功，欢迎" + response.user.name, 10);
-            
-            /**
-            RestfulClient<CalendarDetailResponse> restfulGet = new RestfulClient<CalendarDetailResponse>("/calendar/{calendarId}/detail");
-
-            restfulGet.AddUrlSegment("calendarId",3);
-          
-            
-            CalendarDetailResponse calendarDetail =await restfulGet.GetResponse();
-            if (calendarDetail != null)
             {
-               Console.WriteLine(calendarDetail.creatorName);
-                ShowSystemNotice("请求成功", calendarDetail.creatorName, 1000);
+                ShowSystemNotice("Today", "登录成功，欢迎 " + response.user.name, 10);
+                IFormatter formatter = new BinaryFormatter();
+
+                Stream stream = new FileStream("./user.me", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+                formatter.Serialize(stream, response);
+                stream.Close();
             }
-            */
                
+                
+
+          
 
         }
 

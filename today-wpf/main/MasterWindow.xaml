@@ -22,7 +22,7 @@
                     <RowDefinition Height="380*"/>
                 </Grid.RowDefinitions>
                 <!--每日黄历页面-->
-                <Pages:TodayPage Margin="0,-32,0,62" Grid.RowSpan="2"></Pages:TodayPage>
+                <Pages:TodayPage x:Name="today_page" Margin="0,-32,0,62" Grid.RowSpan="2"></Pages:TodayPage>
             </Grid>
         </Grid>
     </Controls:MetroContentControl>

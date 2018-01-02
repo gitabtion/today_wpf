@@ -180,6 +180,8 @@
     <Compile Include="detail\DetailWindow.xaml.cs">
       <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="dto\request\GetTodayById.cs" />
+    <Compile Include="dto\response\TodayResponse.cs" />
     <Compile Include="Env.cs" />
     <Compile Include="dto\request\BaseRequest.cs" />
     <Compile Include="dto\request\UserLoginRequest.cs" />
@@ -188,6 +190,8 @@
     <Compile Include="main\MasterWindow.xaml.cs">
       <DependentUpon>MasterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="model\Activity.cs" />
+    <Compile Include="model\Item.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="network\RestfulClient.cs" />
     <Compile Include="detail\Detail.xaml.cs">

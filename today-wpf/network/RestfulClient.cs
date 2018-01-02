@@ -6,7 +6,7 @@ using today_wpf.dto.response;
 using today_wpf;
 namespace today_wpf.network
 {
-    class RestfulClient<T>:IDisposable
+    public class RestfulClient<T>:IDisposable
     {
         
         private T response;
@@ -48,7 +48,7 @@ namespace today_wpf.network
 
         public async Task<T> GetResponse()
         {
-            request.AddHeader("token", "d07d3d8943404b36b1a029f0e0a9d10e");
+            request.AddHeader("token", "56be42468b6141ae8b10553ee61a15ad");
             try
             {
                 this.responseO = await client.ExecuteTaskAsync<BaseResponse<T>>(request);

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using today_wpf.model;
 
 namespace today_wpf.pages
 {
@@ -20,11 +21,11 @@ namespace today_wpf.pages
     /// </summary>
     public partial class CalendarItem : UserControl
     {
-        public CalendarItem(String title,String detail)
+        public CalendarItem(Item item)
         {
             InitializeComponent();
-            this.title.Content = title;
-            this.detail.Content = detail;
+            this.title.Content = item.name;
+            this.detail.Content = item.getItemString();
         }
     }
 }

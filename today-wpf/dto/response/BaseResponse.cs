@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace today_wpf.dto.response
 {
-    class BaseResponse<T>
+    public class BaseResponse<T>
     {
         public int code { get;set; }
         public T data { get; set; }

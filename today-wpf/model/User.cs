@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace today_wpf.model
 {
-    class User
+    public class User
     {
         public String name { get; set; }
         public String signature { get; set; }

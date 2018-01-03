@@ -57,7 +57,7 @@
                 </ImageBrush>
             </Border.Background>
         </Border>
-        <Button  Content="找回密码" HorizontalAlignment="Left" Margin="342,227,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.067" Height="22" Width="78" FontSize="14" >
+        <Button  Content="找回密码" HorizontalAlignment="Left" Margin="342,227,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.067" Height="22" Width="78" FontSize="14" Click="Button_Click_2" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <TextBlock TextDecorations=""><InlineUIContainer>

@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using RestSharp;
+using today_wpf.custom;
 using today_wpf.dto.request;
 using today_wpf.dto.response;
 using today_wpf.network;
@@ -162,10 +163,6 @@ namespace today_wpf
                 formatter.Serialize(stream, response);
                 stream.Close();
             }
-               
-                
-
-          
 
         }
 
@@ -181,10 +178,19 @@ namespace today_wpf
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("Register.xaml", UriKind.Relative);
-            new Detail().Show();
-            window.Show();
+            this.Hide();
+            UserMain Main = new UserMain();
+            Main.forget.Visibility = Visibility.Hidden;
+            Main.Show();
+            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            UserMain Main = new UserMain();
+            Main.forget.Visibility = Visibility.Hidden;
+            Main.Show();
         }
     }
 }

@@ -1,0 +1,126 @@
+﻿<UserControl x:Class="today_wpf.custom.register"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:today_wpf.custom"
+             mc:Ignorable="d" Height="308" Width="323">
+    <Grid Margin="10,10,17,20" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.08"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="205*"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="60" Margin="10,15,0,0" VerticalAlignment="Top" Width="62" Grid.Row="1" RenderTransformOrigin="0.804,0.506">
+            <Border.Background>
+                <ImageBrush ImageSource="/today-wpf;component/resource/logo.png"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <ImageBrush/>
+            </Border.BorderBrush>
+        </Border>
+        <TextBox Name="userName" HorizontalAlignment="Left" Height="29" Margin="43,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" MinHeight="0" CaretBrush="#FFD3BFBF" Foreground="#FFF1E3E3" TextChanged="TextBox_TextChanged_1" FontSize="16" Grid.Row="1" Background="#63FFFFFF">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+        </TextBox>
+        <TextBox Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="43,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" TextChanged="TextBox_TextChanged">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="BorderBrush" Value="#c1d0dc"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="6,90,0,0" VerticalAlignment="Top" Width="37" Grid.Row="1" Background="#63FFFFFF">
+            <Border.BorderBrush>
+                <ImageBrush/>
+            </Border.BorderBrush>
+        </Border>
+        <PasswordBox Name="userpassword" HorizontalAlignment="Left" Height="29" Margin="43,127,0,0" VerticalAlignment="Top" Width="233" MinHeight="0" CaretBrush="#FFD3BFBF" Foreground="#FFF1E3E3"  FontSize="16" Grid.Row="1" Background="#63FFFFFF">
+
+        </PasswordBox>
+        <Border BorderThickness="0" HorizontalAlignment="Left" Height="29" Margin="6,127,0,0" VerticalAlignment="Top" Width="36" Grid.Row="1" Background="#63FFFFFF">
+            <Border.BorderBrush>
+                <ImageBrush/>
+            </Border.BorderBrush>
+            <Border BorderThickness="0">
+                <Border.Background>
+                    <ImageBrush ImageSource="/today-wpf;component/resource/1197100.png"/>
+                </Border.Background>
+                <Border.BorderBrush>
+                    <ImageBrush/>
+                </Border.BorderBrush>
+            </Border>
+        </Border>
+        <PasswordBox Name="passwordConfirm" HorizontalAlignment="Left" Height="29" Margin="43,164,0,0"  VerticalAlignment="Top" Width="233" MinHeight="0" CaretBrush="#FFD3BFBF" Foreground="#FFF1E3E3"  FontSize="16" Grid.Row="1" Background="#63FFFFFF">
+
+        </PasswordBox>
+        <Button Content="注  册" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="266" Height="26" MinHeight="0" FontSize="9" Background="#FFF7160C" Foreground="White" FontWeight="Normal" Grid.Row="1" Click="Button_Click"/>
+        <Border BorderThickness="0" HorizontalAlignment="Left" Height="28" Margin="7,90,0,0" Grid.Row="1" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.407"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.BorderBrush>
+                <ImageBrush/>
+            </Border.BorderBrush>
+            <Border.Background>
+                <ImageBrush ImageSource="/today-wpf;component/resource/account.png"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="0" HorizontalAlignment="Left" Height="29" Margin="6,164,0,0" VerticalAlignment="Top" Width="36" Grid.Row="1" Background="#63FFFFFF">
+            <Border.BorderBrush>
+                <ImageBrush/>
+            </Border.BorderBrush>
+            <Border BorderThickness="0">
+                <Border.BorderBrush>
+                    <ImageBrush ImageSource="/today-wpf;component/resource/1197100.png"/>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <ImageBrush ImageSource="/today-wpf;component/resource/1197100.png"/>
+                </Border.Background>
+            </Border>
+        </Border>
+        <TextBox x:Name="signature" HorizontalAlignment="Left" Height="29" Margin="42,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" MinHeight="0" CaretBrush="#FFD3BFBF" Foreground="#FFF1E3E3" TextChanged="TextBox_TextChanged_1" FontSize="16" Grid.Row="1" Background="#63FFFFFF">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+        </TextBox>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="5,199,0,0" VerticalAlignment="Top" Width="37" Grid.Row="1" Background="#63FFFFFF">
+            <Border.BorderBrush>
+                <ImageBrush/>
+            </Border.BorderBrush>
+        </Border>
+        <Border BorderThickness="0" HorizontalAlignment="Left" Height="28" Margin="6,199,0,0" Grid.Row="1" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.407"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.BorderBrush>
+                <ImageBrush/>
+            </Border.BorderBrush>
+            <Border.Background>
+                <ImageBrush ImageSource="/today-wpf;component/resource/account.png"/>
+            </Border.Background>
+        </Border>
+        <Label Content="随缘θ历" HorizontalAlignment="Left" Margin="106,15,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Foreground="White" Width="161" FontFamily="Showcard Gothic" FontSize="36"/>
+
+    </Grid>
+</UserControl>

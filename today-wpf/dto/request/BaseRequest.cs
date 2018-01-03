@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace today_wpf.dto.request
 {
-    class BaseRequest
+    public class BaseRequest
     {
         public string router { set; get; }
         public Method method { set; get; }

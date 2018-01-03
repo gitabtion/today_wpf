@@ -23,6 +23,26 @@ namespace today_wpf.Squre
         public SqurePage()
         {
             InitializeComponent();
+            CalendarModel calendarModel1 = new CalendarModel();
+            calendarModel1.id = 0;
+            calendarModel1.name = "test";
+            calendarModel1.uri = "/resource/head.jpg";
+            SqureCard squreCard = new SqureCard(calendarModel1);
+            SqureCard squreCard2 = new SqureCard(calendarModel1);
+            SqureCard squreCard3 = new SqureCard(calendarModel1);
+            SqureCard squreCard4 = new SqureCard(calendarModel1);
+            SqureCard squreCard5 = new SqureCard(calendarModel1);
+            this.recommendList.Items.Add(squreCard);
+            this.recommendList.Items.Add(squreCard2);
+            this.recommendList.Items.Add(squreCard3);
+            this.recommendList.Items.Add(squreCard4);
+            this.recommendList.Items.Add(squreCard5);
+
+            for(int i = 0; i < 20; i++)
+            {
+                this.allList.Items.Add(new SqureCard(calendarModel1));
+            }
+            
         }
     }
 }

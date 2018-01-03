@@ -4,9 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:today_wpf.Squre"
-             mc:Ignorable="d" Height="530" Width="810">
-
-    <Grid Margin="0,0,0,-34" Height="530">
-            
+             mc:Ignorable="d" Height="530" Width="830">
+    
+    <Grid Margin="0,0,0,0" Height="530">
+        <ListView ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="{x:Null}" Foreground="Black" Background="White" >
+            <Label Content="推荐" HorizontalAlignment="Left" Margin="0,0,0,0" FontSize="20"/>
+                <ListBox Name="recommendList" Margin="0,20,0,0">
+                    <ListBox.Template>
+                        <ControlTemplate TargetType="{x:Type ListBox}">
+                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                                <WrapPanel Orientation="Horizontal" IsItemsHost="True" ScrollViewer.CanContentScroll="True"/>
+                            </ScrollViewer>
+                        </ControlTemplate>
+                    </ListBox.Template>
+                </ListBox>
+            <Label Content="附近人黄历" HorizontalAlignment="Left" Margin="0,0,0,0" FontSize="20"/>
+            <ListBox Name="allList" Margin="0,20,0,0">
+                <ListBox.Template>
+                    <ControlTemplate TargetType="{x:Type ListBox}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <WrapPanel Orientation="Horizontal" IsItemsHost="True" ScrollViewer.CanContentScroll="True"/>
+                        </ScrollViewer>
+                    </ControlTemplate>
+                </ListBox.Template>
+            </ListBox>
+        </ListView>
     </Grid>
 </UserControl>

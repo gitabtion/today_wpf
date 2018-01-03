@@ -19,7 +19,7 @@
                 </ImageBrush>
             </Border.Background>
         </Border>
-        <TextBox Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="77,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" TextChanged="TextBox_TextChanged">
+        <TextBox Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="77,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" >
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -27,7 +27,7 @@
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox Name="txtUserName_c" HorizontalAlignment="Left" Height="27" Margin="77,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" TextChanged="TextBox_TextChanged">
+        <TextBox Name="txtUserName_c" HorizontalAlignment="Left" Height="27" Margin="77,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" >
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -36,7 +36,7 @@
             </TextBox.Resources>
         </TextBox>
         <Label Content="Label" HorizontalAlignment="Left" Margin="140,142,0,0" Foreground="White" VerticalAlignment="Top" RenderTransformOrigin="0.103,0.13" Width="41" Height="24"/>
-        <TextBox x:Name="txtUserName_c_Copy" HorizontalAlignment="Left" Height="27" Margin="77,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" TextChanged="TextBox_TextChanged">
+        <TextBox x:Name="txtUserName_c_Copy" HorizontalAlignment="Left" Height="27" Margin="77,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" >
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

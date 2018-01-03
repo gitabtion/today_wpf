@@ -11,7 +11,7 @@
             <RowDefinition/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Left" Height="192" Margin="18,42,0,0" VerticalAlignment="Top" Width="221" Source="/today-wpf;component/resource/622896.jpg" RenderTransformOrigin="0.689,0.655" Stretch="Fill">
+        <Image x:Name="img_picture" HorizontalAlignment="Left" Height="192" Margin="18,42,0,0" VerticalAlignment="Top" Width="221" Source="/today-wpf;component/resource/622896.jpg" RenderTransformOrigin="0.689,0.655" Stretch="Fill">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

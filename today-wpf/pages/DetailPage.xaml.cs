@@ -49,16 +49,22 @@ namespace today_wpf.pages
         }
     
         public void initUI()
-        {
-            for(int i =0;i<comment.Count;i++)
-            {
-                lv_comment.Items.Add(new CommentItem(comment[i].userName,comment[i].comment,"2018-1-1",""));
-            }
+        {           
+            //img_picture.Source = new BitmapImage(new Uri(detailResponse.picture, UriKind.Relative));
+
+            initCommentView();
             txt_author.Content = detailResponse.creatorName;
             txt_content.Content = detailResponse.description;
             txt_title.Content = detailResponse.title;
         }
-
+        private void initCommentView()
+        {
+            lv_comment.Items.Clear();
+            for (int i = 0; i < comment.Count; i++)
+            {
+                lv_comment.Items.Add(new CommentItem(comment[i].userName, comment[i].comment, "2018-1-1", comment[i].userAvator));
+            }
+        }
         private void btn_subscribe_Click(object sender, RoutedEventArgs e)
         {
         }
@@ -69,8 +75,12 @@ namespace today_wpf.pages
             {
                 AddCommentRequest request = new AddCommentRequest(calendarId, edit_content.Text);
                 RestfulClient<String> detailRestful = new RestfulClient<String>(request);
-                System.Console.WriteLine("successcomment");
-                lv_comment.Items.Add(new CommentItem("yonghu",edit_content.Text,"2018-2-1",""));
+                CommentModel model = new CommentModel();
+                model.userName = "用户名";
+                model.userAvator = "";
+                model.comment = edit_content.Text;
+                comment.Insert(0,model);
+                initCommentView();
             }
         }
     }

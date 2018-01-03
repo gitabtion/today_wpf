@@ -10,33 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
 
-namespace today_wpf.main
+namespace today_wpf.Squre
 {
     /// <summary>
-    /// MasterWindow.xaml 的交互逻辑
+    /// SqurePage.xaml 的交互逻辑
     /// </summary>
-    public partial class MasterWindow : MetroWindow
+    public partial class SqurePage : UserControl
     {
-        public MasterWindow()
+        public SqurePage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TodayPage_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

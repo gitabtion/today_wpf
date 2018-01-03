@@ -205,6 +205,9 @@
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Squre\SqurePage.xaml.cs">
+      <DependentUpon>SqurePage.xaml</DependentUpon>
+    </Compile>
     <Page Include="detail\CommentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -258,6 +261,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="resource\NotifyIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Squre\SqurePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

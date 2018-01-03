@@ -180,6 +180,7 @@
     <Compile Include="detail\DetailWindow.xaml.cs">
       <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="dto\request\GetSubScribedToday.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
     <Compile Include="dto\response\TodayResponse.cs" />
     <Compile Include="Env.cs" />

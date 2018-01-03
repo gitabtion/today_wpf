@@ -11,7 +11,7 @@
             <RowDefinition Height="291*"/>
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Left" Height="530" Grid.Row="1" VerticalAlignment="Top" Width="422">
-            <Image x:Name="imageLabel" HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="421" Source="/today-wpf;component/resource/head.jpg" Stretch="Fill"/>
+            <Image x:Name="imageLabel" HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="421" Source="http://of1deuret.bkt.clouddn.com/17-12-24/97237553.jpg" Stretch="Fill"/>
             <Grid HorizontalAlignment="Left" Height="110" Margin="0,420,0,0" VerticalAlignment="Top" Width="421" Background="#FF197FAB">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="360*"/>
@@ -19,8 +19,8 @@
                 </Grid.ColumnDefinitions>
                 <Label x:Name="nameLabel" Content="程序员老黄历" HorizontalAlignment="Left" Margin="121,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24"/>
                 <Label Content="2017-12-30 Sat" HorizontalAlignment="Left" Margin="133,41,0,0" VerticalAlignment="Top" Foreground="#FFFEFEFE" FontSize="16" Height="34" Width="142"/>
-                <Button Content="&lt;" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="26" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16"/>
-                <Button Content="&gt;" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="26" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Grid.Column="1"/>
+                <Button x:Name="leftButton" Content="&lt;" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="26" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="leftButton_Click"/>
+                <Button x:Name="rightButton" Content="&gt;" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="26" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Grid.Column="1" Click="rightButton_Click"/>
             </Grid>
             <Grid HorizontalAlignment="Left" Height="498" Margin="421,0,-384,0" VerticalAlignment="Top" Width="385" Background="#FFFFFEFE">
                 <ListView x:Name="GoodList" HorizontalAlignment="Left" Height="101" Margin="32,112,0,0" VerticalAlignment="Top" Width="319" Background="{x:Null}" BorderBrush="{x:Null}">

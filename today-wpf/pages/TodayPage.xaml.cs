@@ -26,15 +26,34 @@ namespace today_wpf.pages
     {
         private TodayResponse tResponse { set; get; }
 
+        private List<TodayResponse> tList { set; get; }
+
+        private int currentIndex;
+
         public TodayPage()
         {
             InitializeComponent();
+            currentIndex = 0;
+            tList = new List<TodayResponse>();
+            
+        }
+
+        public void clear()
+        {
+            this.GoodList.Items.Clear();
+            this.BadList.Items.Clear();
+            this.ItemList.Items.Clear();
         }
 
         public void refresh()
         {
+    
+            tResponse = tList[currentIndex];
+
             this.nameLabel.Content = tResponse.calendarName;
-            // this.imageLabel.
+            this.imageLabel.Source = new BitmapImage(new Uri(tResponse.calendarPicture, UriKind.Absolute));
+            clear();
+
             for (int i = 0; i < tResponse.good.Count; i++)
             {
                 this.GoodList.Items.Add(new CalendarActivity(tResponse.good[i]));
@@ -58,8 +77,39 @@ namespace today_wpf.pages
 
             if (rsp != null)
             {
-                System.Console.WriteLine(rsp.ToString());
                 this.tResponse = rsp;
+                refresh();
+            }
+        }
+
+        public async void loadTodayList()
+        {
+            GetSubscribedToday request = new GetSubscribedToday();
+            RestfulClient<List<TodayResponse>> restful = new RestfulClient<List<TodayResponse>>(request);
+
+            List<TodayResponse> rsp = await restful.GetResponse();
+
+            if (rsp != null)
+            {
+                this.tList = rsp;
+                refresh();
+            }
+        }
+
+        private void leftButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.currentIndex >= 1)
+            {
+                currentIndex--;
+                refresh();
+            }
+        }
+
+        private void rightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.currentIndex < this.tList.Count - 1)
+            {
+                currentIndex++;
                 refresh();
             }
         }

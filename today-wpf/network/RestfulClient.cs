@@ -48,7 +48,7 @@ namespace today_wpf.network
 
         public async Task<T> GetResponse()
         {
-            request.AddHeader("token", "56be42468b6141ae8b10553ee61a15ad");
+            request.AddHeader("token", "93ea5e94775e444f949ff37afc234ffa");
             try
             {
                 this.responseO = await client.ExecuteTaskAsync<BaseResponse<T>>(request);

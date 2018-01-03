@@ -27,7 +27,14 @@ namespace today_wpf.main
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.today_page.loadToday(1);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            detail_page.loadDetail(1);
             detail_page.Visibility = Visibility.Visible;
+            today_page.Visibility = Visibility.Hidden;
         }
     }
 }

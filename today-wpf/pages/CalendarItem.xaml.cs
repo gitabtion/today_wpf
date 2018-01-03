@@ -12,26 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using today_wpf.model;
 
 namespace today_wpf.pages
 {
     /// <summary>
-    /// CommentItem.xaml 的交互逻辑
+    /// CalendarItem.xaml 的交互逻辑
     /// </summary>
-    public partial class CommentItem : UserControl
+    public partial class CalendarItem : UserControl
     {
-        public CommentItem(string name ,string content,string date, string avatar) 
-        {
-
-            InitializeComponent();
-     
-            tv_content.Content = content;
-            tv_data .Content= date;
-            tv_name.Content = name; 
-        }
-        public CommentItem()
+        public CalendarItem(Item item)
         {
             InitializeComponent();
+            this.title.Content = item.name;
+            this.detail.Content = item.getItemString();
         }
     }
 }

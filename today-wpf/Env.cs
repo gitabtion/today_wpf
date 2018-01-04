@@ -12,6 +12,6 @@ namespace today_wpf
         public const int POST = 0;
         public const int GET = 1;
         public const int PUT = 2;
-        
+        public const string PROJECT_NAME = "TODAY";
     }
 }

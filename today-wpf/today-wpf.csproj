@@ -174,12 +174,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CalendarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="CalendarPage.xaml.cs">
+      <DependentUpon>CalendarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\forget.xaml.cs">
+      <DependentUpon>forget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\register.xaml.cs">
+      <DependentUpon>register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\userInfo.xaml.cs">
+      <DependentUpon>userInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserMain.xaml.cs">
+      <DependentUpon>UserMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="detail\CommentWindow.xaml.cs">
       <DependentUpon>CommentWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="detail\DetailWindow.xaml.cs">
       <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="dto\request\UserRegisterRequest.cs" />
     <Compile Include="dto\request\GetSubScribedToday.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
     <Compile Include="dto\response\TodayResponse.cs" />
@@ -198,6 +218,22 @@
     <Compile Include="detail\Detail.xaml.cs">
       <DependentUpon>Detail.xaml</DependentUpon>
     </Compile>
+    <Page Include="custom\forget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\userInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\UserMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Compile Include="pages\CalendarActivity.xaml.cs">
       <DependentUpon>CalendarActivity.xaml</DependentUpon>
     </Compile>
@@ -325,6 +361,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resource\随缘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\500614613.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\head.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\1197100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\account.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

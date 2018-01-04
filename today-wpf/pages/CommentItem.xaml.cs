@@ -28,9 +28,9 @@ namespace today_wpf.pages
             tv_content.Content = content;
             tv_data .Content= date;
             tv_name.Content = name;
-            if (!avatar.Equals("")&&avatar!=null)
+            if (avatar != null&&!avatar.Equals(""))
             {
-                img_avatar.Source = new BitmapImage(new Uri(avatar, UriKind.Relative));
+                img_avatar.Source = new BitmapImage(new Uri(avatar, UriKind.Absolute));
 
             }
 

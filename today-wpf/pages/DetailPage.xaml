@@ -25,7 +25,6 @@
         <Label Content="作者" HorizontalAlignment="Left" Margin="247,166,0,0" VerticalAlignment="Top" Height="37" Width="66" FontSize="20"/>
         <Label x:Name="txt_title" Content="Label" HorizontalAlignment="Left" Margin="319,138,0,0" VerticalAlignment="Top" Height="32" Width="232"/>
         <Label x:Name="txt_author" Content="Label" HorizontalAlignment="Left" Margin="319,175,0,0" VerticalAlignment="Top" Height="28" Width="232"/>
-        <Border BorderBrush="Red" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="5,263,0,0" VerticalAlignment="Top"  Background="Red" Width="546"/>
         <Label Content="评论" HorizontalAlignment="Left" Margin="11,233,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="1.015,0.576" Height="26" >
             <Label.RenderTransform>
                 <TransformGroup>
@@ -36,14 +35,13 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <ListView x:Name="lv_comment" Background="{x:Null}" Margin="0,264,259,0" Height="175" VerticalAlignment="Top"/>
+        <ListView x:Name="lv_comment" Margin="10,264,259,0" Height="175" VerticalAlignment="Top" Background="{x:Null}" Grid.Column="1" Width="527"/>
         <Button x:Name="btn_comment" Content="评论" HorizontalAlignment="Left" Margin="486,444,0,0" Width="65" FontSize="16" FontWeight="Normal" RenderTransformOrigin="-0.151,0.515" Height="40" VerticalAlignment="Top" Click="btn_comment_Click"/>
         <TextBox x:Name="edit_content" HorizontalAlignment="Left" Height="32" Margin="5,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="18" Width="476"/>
         <Label Content="简介" Margin="642,10,0,0" VerticalAlignment="Top" Width="77" Height="43" FontWeight="Bold" FontFamily="Mistral" FontSize="24" TextOptions.TextHintingMode="Fixed" HorizontalAlignment="Left"/>
         <Border BorderBrush="#FFBC4444" BorderThickness="1" HorizontalAlignment="Left" Height="425" Margin="556,51,0,0" VerticalAlignment="Top" Width="1"/>
         <Label x:Name="txt_content" Content="这是一个很有趣的黄历，" HorizontalAlignment="Left" Margin="562,51,0,0" VerticalAlignment="Top" Width="246" Height="462" Background="{x:Null}" Foreground="#FF7A7A7A" FontSize="16" FontWeight="ExtraLight" />
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="1009,288,-299,0" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="btn_subscribe" Content="订阅" HorizontalAlignment="Left" Margin="247,208,0,0" VerticalAlignment="Top" Width="75" Click="btn_subscribe_Click"/>
+        <Button x:Name="btn_subscribe" Content="未订阅" HorizontalAlignment="Left" Margin="247,208,0,0" VerticalAlignment="Top" Width="75" Click="btn_subscribe_Click"/>
     </Grid>
 
 </UserControl>

@@ -9,97 +9,97 @@
 
 
             <Button  BorderThickness="0" Background="#138CE3" Name="btnLogin" Content="登  录" Foreground="White"  HorizontalAlignment="Left" Margin="153,267,0,0" VerticalAlignment="Top" Width="169" FontSize="16" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="#dd1144 "/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FF0B73BD"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#dd1144 "/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF0B73BD"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
 
-        <Image Height="169" VerticalAlignment="Top" Source=".\resource\622896.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" Width="446" Margin="0,0,-10,0" />
+            <Image Height="169" VerticalAlignment="Top" Source=".\resource\622896.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" Width="446" Margin="0,0,-10,0" />
 
-        <Button Content="注册账号" HorizontalAlignment="Left" Margin="342,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.067" Height="19" Width="71" FontSize="14" Click="Button_Click_1" >
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <TextBlock TextDecorations="">
+            <Button Content="注册账号" HorizontalAlignment="Left" Margin="342,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.067" Height="19" Width="71" FontSize="14" Click="Button_Click_1" >
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock TextDecorations="">
                 <ContentPresenter />
-                    </TextBlock>
-                </ControlTemplate>
-            </Button.Template>
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Foreground" Value="#128BE2" />
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Foreground" Value="#108EE9" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
+                        </TextBlock>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="#128BE2" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="#108EE9" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
 
 
-        <Border BorderBrush="#FFF8F9" BorderThickness="1" HorizontalAlignment="Left" Height="89" Margin="47,174,0,0" VerticalAlignment="Top" Width="89" CornerRadius="100">
-            <Border.Background>
-                <ImageBrush>
-                    <ImageBrush.ImageSource>
-                        <DrawingImage>
-                            <DrawingImage.Drawing>
-                                <ImageDrawing ImageSource=".\resource\head.jpg" Rect="100,200,110,100"></ImageDrawing>
-                            </DrawingImage.Drawing>
-                        </DrawingImage>
-                    </ImageBrush.ImageSource>
-                </ImageBrush>
-            </Border.Background>
-        </Border>
-        <Button  Content="找回密码" HorizontalAlignment="Left" Margin="342,227,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.067" Height="22" Width="78" FontSize="14" Click="Button_Click_2" >
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <TextBlock TextDecorations=""><InlineUIContainer>
+            <Border BorderBrush="#FFF8F9" BorderThickness="1" HorizontalAlignment="Left" Height="89" Margin="47,174,0,0" VerticalAlignment="Top" Width="89" CornerRadius="100">
+                <Border.Background>
+                    <ImageBrush>
+                        <ImageBrush.ImageSource>
+                            <DrawingImage>
+                                <DrawingImage.Drawing>
+                                    <ImageDrawing ImageSource=".\resource\head.jpg" Rect="100,200,110,100"></ImageDrawing>
+                                </DrawingImage.Drawing>
+                            </DrawingImage>
+                        </ImageBrush.ImageSource>
+                    </ImageBrush>
+                </Border.Background>
+            </Border>
+            <Button  Content="找回密码" HorizontalAlignment="Left" Margin="342,227,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.067" Height="22" Width="78" FontSize="14" Click="Button_Click_2" >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <TextBlock TextDecorations=""><InlineUIContainer>
                             <ContentPresenter />
                         </InlineUIContainer></TextBlock>
-                </ControlTemplate>
-            </Button.Template>
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Foreground" Value="#128BE2" />
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Foreground" Value="#108EE9" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Foreground" Value="#128BE2" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="#108EE9" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
 
-        <TextBox Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="153,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" TextChanged="TextBox_TextChanged">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                    <Setter Property="BorderBrush" Value="#c1d0dc"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-
-
-        <PasswordBox  Name="txtPassword" HorizontalAlignment="Left" Margin="153,227,0,0" VerticalAlignment="Top" Width="169" MaxLength="14" Height="22">
-            <PasswordBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                    <Setter Property="BorderBrush" Value="#FF1A5280"/>
-                </Style>
-            </PasswordBox.Resources>
-        </PasswordBox>
+            <TextBox Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="153,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" TextChanged="TextBox_TextChanged">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                        <Setter Property="BorderBrush" Value="#c1d0dc"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
 
 
+            <PasswordBox  Name="txtPassword" HorizontalAlignment="Left" Margin="153,227,0,0" VerticalAlignment="Top" Width="169" MaxLength="14" Height="22">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                        <Setter Property="BorderBrush" Value="#FF1A5280"/>
+                    </Style>
+                </PasswordBox.Resources>
+            </PasswordBox>
 
 
 
-    </Grid>
-        </Controls:MetroContentControl>
+
+
+        </Grid>
+    </Controls:MetroContentControl>
 </Controls:MetroWindow>

@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using today_wpf.dto.response;
+using today_wpf.main;
 using today_wpf.model;
 using today_wpf.network;
 
@@ -29,7 +30,8 @@ namespace today_wpf.custom
 
         private Stream stream;
         private UserLoginResponse user;
-        private CreatedResponse created;
+        private List<TodayResponse> created;
+        public NewMasterWindow window{get;set;}
         public  userInfo()
         {
             InitializeComponent();
@@ -38,14 +40,15 @@ namespace today_wpf.custom
             stream = new FileStream("./user.me", FileMode.Open, FileAccess.Read, FileShare.Read);
             this.user = (UserLoginResponse)formatter.Deserialize(stream);
             stream.Close();
-            head.Source = new BitmapImage(new Uri(user.user.avatar, UriKind.Relative));
+            head.Source = new BitmapImage(new Uri(user.user.avatar, UriKind.Absolute));
 
             userName.Content = user.user.name;
-            signature.Content = user.user.signature;
+            if(user.user.signature != null)
+                 signature.Content = user.user.signature;
 
             getCreated();
 
-            createCount.Content = this.created.createdList.Count;
+          
 
 
         }
@@ -53,15 +56,19 @@ namespace today_wpf.custom
 
         private async void getCreated()
         {
-            RestfulClient<CreatedResponse> restful = new RestfulClient<CreatedResponse>("/custom/created");
+            RestfulClient<List<TodayResponse>> restful = new RestfulClient<List<TodayResponse>>("/custom/created");
 
             this.created = await restful.GetResponse();
+
+            createCount.Content = this.created.Count;
         }
 
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
+            this.window.userInfo.Visibility = Visibility.Hidden;
+            this.window.edit.Visibility = Visibility.Visible;
         }
 
        

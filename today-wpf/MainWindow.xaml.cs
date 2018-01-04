@@ -57,8 +57,8 @@ namespace today_wpf
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
         {
             InitNotfyIconMenu();
-            ShowSystemNotice("Today", "你的专属日历", 10);
-            ShowSystemNotice("Today", "程序信息初始化完成", 10);
+            ShowSystemNotice("Today", "你的专属日历", 1);
+            ShowSystemNotice("Today", "程序信息初始化完成", 1);
         }
 
         private void InitNotfyIconMenu()

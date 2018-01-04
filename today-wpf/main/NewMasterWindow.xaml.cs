@@ -70,5 +70,13 @@ namespace today_wpf.main
             MainWindow main = MainWindow.GetInstance();
             main.Close();
         }
+
+        private void TabItem_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            userInfo.window = this;
+            edit.window = this;
+            userInfo.Visibility = Visibility.Visible;
+            edit.Visibility = Visibility.Hidden;
+        }
     }
 }

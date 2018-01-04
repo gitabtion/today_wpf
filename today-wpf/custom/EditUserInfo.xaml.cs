@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using today_wpf.main;
 
 namespace today_wpf.custom
 {
@@ -20,6 +21,7 @@ namespace today_wpf.custom
     /// </summary>
     public partial class EditUserInfo : UserControl
     {
+        public NewMasterWindow window {get;set;}
         public EditUserInfo()
         {
             InitializeComponent();
@@ -32,7 +34,14 @@ namespace today_wpf.custom
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.window.edit.Visibility = Visibility.Hidden;
+            MainWindow mainWindow = MainWindow.GetInstance();
 
+
+            mainWindow.notifyIcon.BalloonTipTitle =Env.PROJECT_NAME;
+            mainWindow.notifyIcon.BalloonTipText = "个人信息修改成功";
+            mainWindow.notifyIcon.ShowBalloonTip(1);
+            this.window.userInfo.Visibility = Visibility.Visible;
         }
     }
 }

@@ -10,9 +10,9 @@
     <Controls:MetroContentControl>
         <Grid>
             <Grid HorizontalAlignment="Left" Height="501" VerticalAlignment="Top" Width="127" Background="#FFD2D1D1" Margin="0,0,0,-0.333">
-                <Button Content="我的订阅" HorizontalAlignment="Left" Margin="27,194,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-                <Button Content="黄历广场" HorizontalAlignment="Left" Margin="27,317,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button Content="管理" HorizontalAlignment="Left" Margin="27,439,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="todayButton" Content="我的订阅" HorizontalAlignment="Left" Margin="27,194,0,0" VerticalAlignment="Top" Width="75" Click="todayButton_Click" />
+                <Button x:Name="piazzaButton" Content="黄历广场" HorizontalAlignment="Left" Margin="27,317,0,0" VerticalAlignment="Top" Width="75" Click="piazzaButton_Click"/>
+                <Button x:Name="manageButton" Content="管理" HorizontalAlignment="Left" Margin="27,439,0,0" VerticalAlignment="Top" Width="75"/>
                 <Image HorizontalAlignment="Left" Height="111" VerticalAlignment="Top" Width="127" Source="/today-wpf;component/resource/head.jpg" Stretch="Fill"/>
             </Grid>
             <!--核心视图容器-->

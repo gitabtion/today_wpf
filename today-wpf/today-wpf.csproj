@@ -186,12 +186,11 @@
     <Compile Include="custom\UserMain.xaml.cs">
       <DependentUpon>UserMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="detail\CommentWindow.xaml.cs">
-      <DependentUpon>CommentWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="detail\DetailWindow.xaml.cs">
-      <DependentUpon>DetailWindow.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="dto\request\AddCommentRequest.cs" />
+    <Compile Include="dto\request\DetailRequest.cs" />
+    <Compile Include="dto\request\GetComment.cs" />
+    <Compile Include="dto\request\SubscribeRequest.cs" />
+    <Compile Include="dto\request\UnsubscribeRequest.cs" />
     <Compile Include="dto\request\UserRegisterRequest.cs" />
     <Compile Include="dto\request\GetSubScribedToday.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
@@ -241,14 +240,6 @@
     <Compile Include="pages\TodayPage.xaml.cs">
       <DependentUpon>TodayPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="detail\CommentWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="detail\DetailWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -23,18 +23,22 @@ namespace today_wpf.main
         public MasterWindow()
         {
             InitializeComponent();
+            today_page.Visibility = Visibility.Visible;
+            detail_page.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void todayButton_Click(object sender, RoutedEventArgs e)
         {
+            detail_page.Visibility = Visibility.Hidden;
+            today_page.Visibility = Visibility.Visible;
             this.today_page.loadTodayList();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void piazzaButton_Click(object sender, RoutedEventArgs e)
         {
-            detail_page.loadDetail(1);
-            detail_page.Visibility = Visibility.Visible;
+            detail_page.loadDetail(1,true);
             today_page.Visibility = Visibility.Hidden;
+            detail_page.Visibility = Visibility.Visible;
         }
     }
 }

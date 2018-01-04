@@ -35,6 +35,12 @@ namespace today_wpf.pages
             InitializeComponent();
             currentIndex = 0;
             tList = new List<TodayResponse>();
+            // 加载页面时预加载，如果没有就不刷新页面
+            this.loadTodayList();
+            if (tList.Count > 0)
+            {
+                refresh();
+            }
             
         }
 
@@ -71,6 +77,8 @@ namespace today_wpf.pages
 
         public async void loadToday(long calendarId)
         {
+            // 单个黄历信息的请求
+
             GetTodayById request = new GetTodayById(calendarId);
             RestfulClient<TodayResponse> restful = new RestfulClient<TodayResponse>(request);
 
@@ -85,6 +93,8 @@ namespace today_wpf.pages
 
         public async void loadTodayList()
         {
+            // 列表的请求
+
             GetSubscribedToday request = new GetSubscribedToday();
             RestfulClient<List<TodayResponse>> restful = new RestfulClient<List<TodayResponse>>(request);
 

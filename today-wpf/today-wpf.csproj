@@ -174,21 +174,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-<<<<<<<<< Temporary merge branch 1
-    <Compile Include="dto\request\AddCommentRequest.cs" />
-    <Compile Include="dto\request\DetailRequest.cs" />
-    <Compile Include="dto\request\GetComment.cs" />
-    <Compile Include="dto\request\GetTodayById.cs" />
-    <Compile Include="dto\response\DetailResponse.cs" />
-    <Compile Include="dto\response\TodayResponse.cs" />
-=========
-    <Page Include="CalendarPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Compile Include="CalendarPage.xaml.cs">
-      <DependentUpon>CalendarPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="custom\forget.xaml.cs">
       <DependentUpon>forget.xaml</DependentUpon>
     </Compile>
@@ -209,11 +194,6 @@
     <Compile Include="dto\request\UserRegisterRequest.cs" />
     <Compile Include="dto\request\GetSubScribedToday.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
-    <Compile Include="dto\response\DetailResponse.cs" />
-    <Compile Include="dto\response\TodayResponse.cs" />
-    <Compile Include="dto\request\AddCommentRequest.cs" />
-    <Compile Include="dto\request\DetailRequest.cs" />
-    <Compile Include="dto\request\GetComment.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
     <Compile Include="dto\response\DetailResponse.cs" />
     <Compile Include="dto\response\TodayResponse.cs" />

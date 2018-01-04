@@ -29,5 +29,12 @@ namespace today_wpf.main
         {
             this.today_page.loadTodayList();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            detail_page.loadDetail(1);
+            detail_page.Visibility = Visibility.Visible;
+            today_page.Visibility = Visibility.Hidden;
+        }
     }
 }

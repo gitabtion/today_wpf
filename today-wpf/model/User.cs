@@ -15,8 +15,6 @@ namespace today_wpf.model
         public int sex { get; set; }
         public long createdAt { get; set; }
         public long updatedAt { get; set; }
-
-
     }
 }
 

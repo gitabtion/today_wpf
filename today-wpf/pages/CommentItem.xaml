@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="today_wpf.pages.CommentItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:today_wpf.pages"
+             mc:Ignorable="d" Height="134.009" Width="332.094">
+    <Grid Margin="0,0,0,-25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="tv_name"  HorizontalAlignment="Left" Margin="88,26,0,0" VerticalAlignment="Top" Width="57" Height="27" RenderTransformOrigin="0.926,0.596" Content="奥特曼" Grid.ColumnSpan="2" Background="{x:Null}"/>
+        <Label x:Name="tv_data" Content="2018-01-01" HorizontalAlignment="Left" Margin="88,58,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="{x:Null}"/>
+        <Label x:Name="tv_content" Content="今天天气不错" HorizontalAlignment="Left" Margin="88,83,-53,0" VerticalAlignment="Top" Height="75" Width="297" Grid.ColumnSpan="2" Background="{x:Null}" Grid.RowSpan="2"/>
+        <Image x:Name="img_avatar" HorizontalAlignment="Left" Height="31" Margin="53,39,0,0" VerticalAlignment="Top" Width="35" Source="/today-wpf;component/resource/622896.jpg" Stretch="Fill" Cursor="No" Grid.ColumnSpan="2" RenderTransformOrigin="0.2,-0.147"/>
+    </Grid>
+</UserControl>

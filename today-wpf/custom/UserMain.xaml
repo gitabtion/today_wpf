@@ -19,6 +19,7 @@
             <Grid Name="forget" HorizontalAlignment="Left" Height="333" Margin="1074,183,0,0" VerticalAlignment="Top" Width="356">
                 <local:forget Margin="36,28,10,0"></local:forget>
             </Grid>
+            
         </Grid>
     </Controls:MetroContentControl>
 </Controls:MetroWindow>

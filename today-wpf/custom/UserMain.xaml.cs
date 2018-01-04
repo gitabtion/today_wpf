@@ -57,5 +57,7 @@ namespace today_wpf.custom
             MainWindow main = MainWindow.GetInstance();
             main.Show();
         }
+
+     
     }
 }

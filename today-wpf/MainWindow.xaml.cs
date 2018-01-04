@@ -154,7 +154,7 @@ namespace today_wpf
             RestfulClient<UserLoginResponse> restful = new RestfulClient<UserLoginResponse>(userLoginRequest);
             
             UserLoginResponse response =await restful.GetResponse();
-
+            
             if (response != null)
             {
                 ShowSystemNotice("Today", "登录成功，欢迎 " + response.user.name, 10);

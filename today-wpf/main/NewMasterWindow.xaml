@@ -7,7 +7,7 @@
     xmlns:Pages="clr-namespace:today_wpf.pages"
     xmlns:Pages1="clr-namespace:today_wpf.Squre"
     mc:Ignorable="d"
-        Title="MasterWindow" Height="640" Width="1000"  Closed="MetroWindow_Closed">
+        Title="MasterWindow" Height="640" Width="1000">
     <Grid>
         <TabControl HorizontalAlignment="Left" VerticalAlignment="Top" Width="1000" Foreground="{x:Null}">
             <TabItem Header="黄历首页" Margin="221,2,-221,-2" HorizontalAlignment="Left" VerticalAlignment="Top" >

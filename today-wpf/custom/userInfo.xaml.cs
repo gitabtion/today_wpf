@@ -35,7 +35,7 @@ namespace today_wpf.custom
             InitializeComponent();
 
             IFormatter formatter = new BinaryFormatter();
-            this.stream = new FileStream("./user.me", FileMode.Open, FileAccess.Read, FileShare.Read);
+            stream = new FileStream("./user.me", FileMode.Open, FileAccess.Read, FileShare.Read);
             this.user = (UserLoginResponse)formatter.Deserialize(stream);
             stream.Close();
             head.Source = new BitmapImage(new Uri(user.user.avatar, UriKind.Relative));

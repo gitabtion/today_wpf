@@ -38,10 +38,7 @@ namespace today_wpf.main
             today_page.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        
 
         private void TodayPage_Loaded(object sender, RoutedEventArgs e)
         {

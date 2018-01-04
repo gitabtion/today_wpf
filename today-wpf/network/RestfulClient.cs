@@ -10,9 +10,9 @@ using System.Runtime.Serialization;
 
 namespace today_wpf.network
 {
-    public class RestfulClient<T>:IDisposable
+    class RestfulClient<T> : IDisposable
     {
-        
+
         private T response;
         private RestRequest request;
         private RestClient client;
@@ -27,21 +27,21 @@ namespace today_wpf.network
             request.AddHeader("Content-Type", "application/json");
             request.AddBody(baseRequest);
         }
-        
+
         public RestfulClient(string router)
         {
             this.client = new RestClient(Env.BASE_URL);
-            this.request = new RestRequest(router,Method.GET);
+            this.request = new RestRequest(router, Method.GET);
             request.RequestFormat = DataFormat.Json;
             request.AddHeader("Content-Type", "application/json");
         }
 
-        public void AddParameter(string key,string value)
+        public void AddParameter(string key, string value)
         {
             this.request.AddQueryParameter(key, value);
         }
 
-        public void AddUrlSegment(string key,int value)
+        public void AddUrlSegment(string key, int value)
         {
             this.request.AddUrlSegment(key, value);
         }
@@ -55,17 +55,18 @@ namespace today_wpf.network
         {
             try
             {
-                 IFormatter formatter = new BinaryFormatter();
-                 this.stream = new FileStream("./user.me", FileMode.Open,FileAccess.Read, FileShare.Read);
-                 var user = (UserLoginResponse)formatter.Deserialize(stream);
-                 stream.Close();
-                 request.AddHeader("token", user.token);
+                IFormatter formatter = new BinaryFormatter();
+                this.stream = new FileStream("./user.me", FileMode.Open, FileAccess.Read, FileShare.Read);
+                var user = (UserLoginResponse)formatter.Deserialize(stream);
+                stream.Close();
+                request.AddHeader("token", user.token);
             }
-            catch
+            catch(Exception e)
             {
+                System.Console.WriteLine(e.Message);
                 stream.Close();
             }
-           
+
             try
             {
                 this.responseO = await client.ExecuteTaskAsync<BaseResponse<T>>(request);
@@ -79,37 +80,37 @@ namespace today_wpf.network
 
             if (responseO.IsSuccessful == false)
             {
-                 ShowSystemNotice("请求失败", "服务器异常", 2);
+                ShowSystemNotice("请求失败", "服务器异常", 2);
                 return default(T);
             }
             else
             {
-                if(responseO.Data.code != 0)
+                if (responseO.Data.code != 0)
                 {
-                   
+
                     ShowSystemNotice("请求失败", responseO.Data.message, 2);
                     return default(T);
                 }
             }
-           
+
             this.response = responseO.Data.data;
             return this.response;
         }
 
-       
+
         private void ShowSystemNotice(string title, string content, int timeOut)
         {
             MainWindow mainWindow = MainWindow.GetInstance();
-           
-            
-            
+
+
+
             mainWindow.notifyIcon.BalloonTipTitle = title;
             mainWindow.notifyIcon.BalloonTipText = content;
             mainWindow.notifyIcon.ShowBalloonTip(timeOut);
-            
-          
-           
-           
+
+
+
+
         }
     }
 }

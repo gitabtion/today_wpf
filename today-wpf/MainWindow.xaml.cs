@@ -39,12 +39,12 @@ namespace today_wpf
         private static readonly object locker = new object();
         public static MainWindow GetInstance()
         {
-            
+
             if (singleInstance == null)
             {
                 lock (locker)
                 {
-                   
+
                     if (singleInstance == null)
                     {
                         singleInstance = new MainWindow();
@@ -118,7 +118,7 @@ namespace today_wpf
                     break;
                 case "关于":
                     ShowMain();
-                   
+
                     break;
                 case "退出":
                     ShowMain();
@@ -145,15 +145,15 @@ namespace today_wpf
             notifyIcon.BalloonTipText = content;
             notifyIcon.ShowBalloonTip(timeOut);
         }
-      
-     
+
+
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             UserLoginRequest userLoginRequest = new UserLoginRequest(txtUserName.Text, txtPassword.Password);
             RestfulClient<UserLoginResponse> restful = new RestfulClient<UserLoginResponse>(userLoginRequest);
-            
-            UserLoginResponse response =await restful.GetResponse();
+
+            UserLoginResponse response = await restful.GetResponse();
 
             if (response != null)
             {
@@ -163,6 +163,11 @@ namespace today_wpf
                 Stream stream = new FileStream("./user.me", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
                 formatter.Serialize(stream, response);
                 stream.Close();
+
+                this.Hide();
+
+                MasterWindow masterWindow = new MasterWindow();
+                masterWindow.Show();
             }
 
         }
@@ -183,7 +188,7 @@ namespace today_wpf
             UserMain Main = new UserMain();
             Main.forget.Visibility = Visibility.Hidden;
             Main.Show();
-            
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

@@ -174,13 +174,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CalendarPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Compile Include="CalendarPage.xaml.cs">
-      <DependentUpon>CalendarPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="custom\forget.xaml.cs">
       <DependentUpon>forget.xaml</DependentUpon>
     </Compile>
@@ -243,9 +236,6 @@
     <Compile Include="pages\TodayPage.xaml.cs">
       <DependentUpon>TodayPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Register.xaml.cs">
-      <DependentUpon>Register.xaml</DependentUpon>
-    </Compile>
     <Page Include="detail\CommentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -285,10 +275,6 @@
     <Page Include="pages\TodayPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Register.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>

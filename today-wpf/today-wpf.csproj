@@ -174,47 +174,58 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CalendarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="CalendarPage.xaml.cs">
+      <DependentUpon>CalendarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\forget.xaml.cs">
+      <DependentUpon>forget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\register.xaml.cs">
+      <DependentUpon>register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\userInfo.xaml.cs">
+      <DependentUpon>userInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserMain.xaml.cs">
+      <DependentUpon>UserMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="detail\CommentWindow.xaml.cs">
       <DependentUpon>CommentWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="detail\DetailWindow.xaml.cs">
       <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="dto\request\UserRegisterRequest.cs" />
     <Compile Include="Env.cs" />
     <Compile Include="dto\request\BaseRequest.cs" />
     <Compile Include="dto\request\UserLoginRequest.cs" />
     <Compile Include="dto\response\BaseResponse.cs" />
     <Compile Include="dto\response\UserLoginResponse.cs" />
-    <Compile Include="main\MasterWindow.xaml.cs">
-      <DependentUpon>MasterWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="main\NewMasterWindow.xaml.cs">
-      <DependentUpon>NewMasterWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="model\User.cs" />
     <Compile Include="network\RestfulClient.cs" />
     <Compile Include="detail\Detail.xaml.cs">
       <DependentUpon>Detail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pages\CalendarActivity.xaml.cs">
-      <DependentUpon>CalendarActivity.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\CalendarItem.xaml.cs">
-      <DependentUpon>CalendarItem.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\TodayPage.xaml.cs">
-      <DependentUpon>TodayPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Register.xaml.cs">
-      <DependentUpon>Register.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Squre\CalendarModel.cs" />
-    <Compile Include="Squre\SqureCard.xaml.cs">
-      <DependentUpon>SqureCard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Squre\SqurePage.xaml.cs">
-      <DependentUpon>SqurePage.xaml</DependentUpon>
-    </Compile>
+    <Page Include="custom\forget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\userInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\UserMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="detail\CommentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -239,30 +250,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="main\MasterWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="main\NewMasterWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="pages\CalendarActivity.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="pages\CalendarItem.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="pages\TodayPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Register.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -272,14 +259,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="resource\NotifyIcon.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Squre\SqureCard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Squre\SqurePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -339,6 +318,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resource\calendar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\随缘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\500614613.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\head.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\1197100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\account.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace today_wpf.dto.request
 {
-    class UserLoginRequest:BaseRequest
+    public class UserLoginRequest:BaseRequest
     {
         public string name { get; set; }
         public string password { get; set; }

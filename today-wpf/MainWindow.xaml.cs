@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,10 +17,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using RestSharp;
+using today_wpf.custom;
 using today_wpf.dto.request;
 using today_wpf.dto.response;
 using today_wpf.network;
-using today_wpf.main;
 namespace today_wpf
 {
     public partial class MainWindow : MetroWindow
@@ -153,24 +156,13 @@ namespace today_wpf
 
             if (response != null)
             {
-                ShowSystemNotice("Today", "登录成功，欢迎" + response.user.name, 10);
-                new MasterWindow().Show();   
-            }
-            
-            /**
-            RestfulClient<CalendarDetailResponse> restfulGet = new RestfulClient<CalendarDetailResponse>("/calendar/{calendarId}/detail");
+                ShowSystemNotice("Today", "登录成功，欢迎 " + response.user.name, 10);
+                IFormatter formatter = new BinaryFormatter();
 
-            restfulGet.AddUrlSegment("calendarId",3);
-          
-            
-            CalendarDetailResponse calendarDetail =await restfulGet.GetResponse();
-            if (calendarDetail != null)
-            {
-               Console.WriteLine(calendarDetail.creatorName);
-                ShowSystemNotice("请求成功", calendarDetail.creatorName, 1000);
+                Stream stream = new FileStream("./user.me", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+                formatter.Serialize(stream, response);
+                stream.Close();
             }
-            */
-               
 
         }
 
@@ -186,10 +178,19 @@ namespace today_wpf
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("Register.xaml", UriKind.Relative);
-            new Detail().Show();
-            window.Show();
+            this.Hide();
+            UserMain Main = new UserMain();
+            Main.forget.Visibility = Visibility.Hidden;
+            Main.Show();
+            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            UserMain Main = new UserMain();
+            Main.forget.Visibility = Visibility.Hidden;
+            Main.Show();
         }
     }
 }

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace today_wpf
+namespace today_wpf.custom
 {
     /// <summary>
-    /// Register.xaml 的交互逻辑
+    /// userInfo.xaml 的交互逻辑
     /// </summary>
-    public partial class Register : Page
+    public partial class userInfo : UserControl
     {
-        public Register()
+        public userInfo()
         {
             InitializeComponent();
         }

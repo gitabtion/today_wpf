@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 using today_wpf.dto.request;
 using today_wpf.dto.response;
 using today_wpf;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
+
 namespace today_wpf.network
 {
     class RestfulClient<T>:IDisposable
@@ -14,6 +18,7 @@ namespace today_wpf.network
         private RestClient client;
         private IRestResponse<BaseResponse<T>> responseO;
         private string token;
+        private Stream stream;
         public RestfulClient(BaseRequest baseRequest)
         {
             this.client = new RestClient(Env.BASE_URL);
@@ -48,7 +53,19 @@ namespace today_wpf.network
 
         public async Task<T> GetResponse()
         {
-            request.AddHeader("token", "d07d3d8943404b36b1a029f0e0a9d10e");
+            try
+            {
+                 IFormatter formatter = new BinaryFormatter();
+                 this.stream = new FileStream("./user.me", FileMode.Open,FileAccess.Read, FileShare.Read);
+                 var user = (UserLoginResponse)formatter.Deserialize(stream);
+                 stream.Close();
+                 request.AddHeader("token", user.token);
+            }
+            catch
+            {
+                stream.Close();
+            }
+           
             try
             {
                 this.responseO = await client.ExecuteTaskAsync<BaseResponse<T>>(request);

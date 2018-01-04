@@ -20,6 +20,7 @@ using RestSharp;
 using today_wpf.custom;
 using today_wpf.dto.request;
 using today_wpf.dto.response;
+using today_wpf.main;
 using today_wpf.network;
 namespace today_wpf
 {
@@ -162,6 +163,8 @@ namespace today_wpf
                 Stream stream = new FileStream("./user.me", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
                 formatter.Serialize(stream, response);
                 stream.Close();
+                Window window = new NewMasterWindow();
+                window.Show();
             }
 
         }

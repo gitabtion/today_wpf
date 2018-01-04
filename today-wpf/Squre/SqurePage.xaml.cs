@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using today_wpf.network;
 
 namespace today_wpf.Squre
 {
@@ -20,40 +21,47 @@ namespace today_wpf.Squre
     /// </summary>
     public partial class SqurePage : UserControl
     {
+        public List<CalendarModel> recommendListData { get; set; }
+        public List<CalendarModel> allListData { get; set; }
         public SqurePage()
         {
             InitializeComponent();
-            CalendarModel calendarModel1 = new CalendarModel();
-            calendarModel1.id = 0;
-            calendarModel1.name = "test";
-            calendarModel1.uri = "/resource/head.jpg";
-            SqureCard squreCard = new SqureCard(calendarModel1);
-            SqureCard squreCard2 = new SqureCard(calendarModel1);
-            SqureCard squreCard3 = new SqureCard(calendarModel1);
-            SqureCard squreCard4 = new SqureCard(calendarModel1);
-            SqureCard squreCard5 = new SqureCard(calendarModel1);
-            this.recommendList.Items.Add(squreCard);
-            this.recommendList.Items.Add(squreCard2);
-            this.recommendList.Items.Add(squreCard3);
-            this.recommendList.Items.Add(squreCard4);
-            this.recommendList.Items.Add(squreCard5);
+            loadDataAsync();
 
-            for (int i = 0; i < 20; i++)
-            {
-                this.allList.Items.Add(new SqureCard(calendarModel1));
-            }
+            
 
         }
 
         private void recommendList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SqureCard squre = recommendList.SelectedItem as SqureCard;
-            Console.WriteLine(squre.calendar.name);
+            Console.WriteLine(squre.calendar.title);
         }
 
         private void allList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SqureCard squre = recommendList.SelectedItem as SqureCard;
+        }
+        private async void loadDataAsync()
+        {
+            RestfulClient<List<CalendarModel>> recommendListRest = new RestfulClient<List<CalendarModel>>("/piazza/most-subscribed");
+            recommendListRest.AddParameter("size", "500");
+            RestfulClient<List<CalendarModel>> allListRest = new RestfulClient<List<CalendarModel>>("/piazza/all");
+            allListRest.AddParameter("size", "500");
+            this.recommendListData = await recommendListRest.GetResponse();
+            this.allListData = await allListRest.GetResponse();
+            Console.Write("ended");
+
+            Console.Write(allListData[0]);
+            for (int i = 0; i < this.recommendListData.Count; i++)
+            {
+                this.recommendList.Items.Add(new SqureCard(recommendListData[i]));
+            }
+
+            for (int i = 0; i < this.allListData.Count; i++)
+            {
+                this.allList.Items.Add(new SqureCard(allListData[i]));
+            }
         }
     }
 }

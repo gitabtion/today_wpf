@@ -8,10 +8,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using today_wpf.network;
+using today_wpf.Squre;
 
 namespace today_wpf.main
 {
@@ -30,9 +33,6 @@ namespace today_wpf.main
 
         }
 
-        private void SqurePage_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        
     }
 }

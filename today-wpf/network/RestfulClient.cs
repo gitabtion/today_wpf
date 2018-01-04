@@ -59,7 +59,7 @@ namespace today_wpf.network
                  this.stream = new FileStream("./user.me", FileMode.Open,FileAccess.Read, FileShare.Read);
                  var user = (UserLoginResponse)formatter.Deserialize(stream);
                  stream.Close();
-                 request.AddHeader("token", user.token);
+                request.AddHeader("token", user.token);
             }
             catch
             {
@@ -76,7 +76,7 @@ namespace today_wpf.network
                 ShowSystemNotice("请求失败", "网络异常", 2);
                 return default(T);
             }
-
+           
             if (responseO.IsSuccessful == false)
             {
                  ShowSystemNotice("请求失败", "服务器异常", 2);
@@ -106,10 +106,7 @@ namespace today_wpf.network
             mainWindow.notifyIcon.BalloonTipTitle = title;
             mainWindow.notifyIcon.BalloonTipText = content;
             mainWindow.notifyIcon.ShowBalloonTip(timeOut);
-            
-          
-           
-           
+
         }
     }
 }

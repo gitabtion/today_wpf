@@ -14,14 +14,17 @@
                 <Pages:TodayPage Margin="0,0,0,0" Grid.RowSpan="2" Loaded="TodayPage_Loaded"></Pages:TodayPage>
             </TabItem>
 
-            <TabItem Header="我的订阅" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="281,4,-281,-4">
-                <Grid Background="#FFD6D6D6" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            </TabItem>
-            <TabItem Header="黄历广场" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,4,-339,-4">
+
+            <TabItem Header="黄历广场" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="281,4,-281,-4">
                 <Grid Background="#FFD6D6D6" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Pages1:SqurePage Loaded="SqurePage_Loaded" Margin="139,9,-831,-9" Width="692" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}"/>
+                    <Pages1:SqurePage Margin="139,9,-831,-9" Width="692" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}"/>
                 </Grid>
             </TabItem>
+
+            <TabItem Header="我的订阅" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,4,-339,-4">
+                <Grid Background="#FFD6D6D6" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </TabItem>
+            <ProgressBar Width="100"/>
         </TabControl>
     </Grid>
 </Controls:MetroWindow>

@@ -25,8 +25,8 @@ namespace today_wpf.Squre
         {
             InitializeComponent();
             calendar = calendarModel;
-            this.card_name.Content = calendar.name;
-            this.img_calendar.Source = new BitmapImage(new Uri(calendar.uri, UriKind.Relative));
+            this.card_name.Content = calendar.title;
+            this.img_calendar.Source = new BitmapImage(new Uri(calendar.picture, UriKind.Absolute));
         }
     }
 }

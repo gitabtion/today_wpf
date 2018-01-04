@@ -189,10 +189,13 @@
     <Compile Include="custom\UserMain.xaml.cs">
       <DependentUpon>UserMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="dto\request\UserRegisterRequest.cs" />
     <Compile Include="dto\request\AddCommentRequest.cs" />
     <Compile Include="dto\request\DetailRequest.cs" />
     <Compile Include="dto\request\GetComment.cs" />
+    <Compile Include="dto\request\SubscribeRequest.cs" />
+    <Compile Include="dto\request\UnsubscribeRequest.cs" />
+    <Compile Include="dto\request\UserRegisterRequest.cs" />
+    <Compile Include="dto\request\GetSubScribedToday.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
     <Compile Include="dto\response\createdResponse.cs" />
     <Compile Include="dto\response\DetailResponse.cs" />
@@ -223,12 +226,7 @@
     <Compile Include="pages\CalendarActivity.xaml.cs">
       <DependentUpon>CalendarActivity.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pages\CalendarItem.xaml.cs">
-      <DependentUpon>CalendarItem.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\TodayPage.xaml.cs">
-      <DependentUpon>TodayPage.xaml</DependentUpon>
-    </Compile>
+    
     <Compile Include="Squre\CalendarModel.cs" />
     <Compile Include="Squre\SqureCard.xaml.cs">
       <DependentUpon>SqureCard.xaml</DependentUpon>
@@ -256,6 +254,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="pages\CalendarItem.xaml.cs">
+      <DependentUpon>CalendarItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\TodayPage.xaml.cs">
+      <DependentUpon>TodayPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

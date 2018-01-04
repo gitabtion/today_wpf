@@ -26,15 +26,41 @@ namespace today_wpf.pages
     {
         private TodayResponse tResponse { set; get; }
 
+        private List<TodayResponse> tList { set; get; }
+
+        private int currentIndex;
+
         public TodayPage()
         {
             InitializeComponent();
+            currentIndex = 0;
+            tList = new List<TodayResponse>();
+            // 加载页面时预加载，如果没有就不刷新页面
+            this.loadTodayList();
+            if (tList.Count > 0)
+            {
+                refresh();
+            }
+            
+        }
+
+        public void clear()
+        {
+            this.GoodList.Items.Clear();
+            this.BadList.Items.Clear();
+            this.ItemList.Items.Clear();
         }
 
         public void refresh()
         {
+    
+            tResponse = tList[currentIndex];
+
+            this.dateLabel.Content = DateTime.Now.ToString("yyyy-MM-dd");
             this.nameLabel.Content = tResponse.calendarName;
-            // this.imageLabel.
+            this.imageLabel.Source = new BitmapImage(new Uri(tResponse.calendarPicture, UriKind.Absolute));
+            clear();
+
             for (int i = 0; i < tResponse.good.Count; i++)
             {
                 this.GoodList.Items.Add(new CalendarActivity(tResponse.good[i]));
@@ -51,6 +77,8 @@ namespace today_wpf.pages
 
         public async void loadToday(long calendarId)
         {
+            // 单个黄历信息的请求
+
             GetTodayById request = new GetTodayById(calendarId);
             RestfulClient<TodayResponse> restful = new RestfulClient<TodayResponse>(request);
 
@@ -58,8 +86,41 @@ namespace today_wpf.pages
 
             if (rsp != null)
             {
-                System.Console.WriteLine(rsp.ToString());
                 this.tResponse = rsp;
+                refresh();
+            }
+        }
+
+        public async void loadTodayList()
+        {
+            // 列表的请求
+
+            GetSubscribedToday request = new GetSubscribedToday();
+            RestfulClient<List<TodayResponse>> restful = new RestfulClient<List<TodayResponse>>(request);
+
+            List<TodayResponse> rsp = await restful.GetResponse();
+
+            if (rsp != null)
+            {
+                this.tList = rsp;
+                refresh();
+            }
+        }
+
+        private void leftButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.currentIndex >= 1)
+            {
+                currentIndex--;
+                refresh();
+            }
+        }
+
+        private void rightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.currentIndex < this.tList.Count - 1)
+            {
+                currentIndex++;
                 refresh();
             }
         }

@@ -24,49 +24,71 @@ namespace today_wpf.pages
     public partial class DetailPage : UserControl
     {
         private long calendarId;
+        private bool isSubscribe;
         private List<CommentModel> comment;
         private DetailResponse detailResponse;
         public DetailPage()
         {
             InitializeComponent();
-
         }
 
-        public async void loadDetail(long calendarId)
+        public async void loadDetail(long calendarId,bool isSubscribe)
         {
-            this.calendarId = calendarId;
-            GetComment commentRequest = new GetComment(calendarId);
-            DetailRequest detailRequest = new DetailRequest(calendarId);
-            RestfulClient<DetailResponse> detailRestful = new RestfulClient<DetailResponse>(detailRequest);
-            RestfulClient<List<CommentModel>> commentRestful = new RestfulClient<List<CommentModel>>(commentRequest);
-            comment = await commentRestful.GetResponse();
-            detailResponse = await detailRestful.GetResponse();
-            if(comment!=null&&detailResponse!=null)
+            this.isSubscribe = isSubscribe;
+            if(isSubscribe)
             {
-                System.Console.WriteLine(comment.ToString());
-                initUI();
+                btn_subscribe.Content = "已订阅";
             }
+            else
+            {
+                btn_subscribe.Content = "未订阅";
+            }
+            this.calendarId = calendarId;
+            initCommentViewAsync();
+            initDetailView();
+          
+    
         }
     
-        public void initUI()
-        {           
-            //img_picture.Source = new BitmapImage(new Uri(detailResponse.picture, UriKind.Relative));
+        private async Task initCommentViewAsync()
+        {
+            GetComment commentRequest = new GetComment(calendarId);
+            RestfulClient<List<CommentModel>> commentRestful = new RestfulClient<List<CommentModel>>(commentRequest);
+            comment = await commentRestful.GetResponse();
+            lv_comment.Items.Clear();
+            for (int i = 0; i < comment.Count; i++)
+            {
+                lv_comment.Items.Add(new CommentItem(comment[i].userName, comment[i].comment, "2018-1-1", comment[i].userAvatar));
+            }
+        }
 
-            initCommentView();
+        private async Task initDetailView()
+        {
+            DetailRequest detailRequest = new DetailRequest(calendarId);
+            RestfulClient<DetailResponse> detailRestful = new RestfulClient<DetailResponse>(detailRequest);
+            detailResponse = await detailRestful.GetResponse();
+            this.img_picture.Source = new BitmapImage(new Uri(detailResponse.picture, UriKind.Absolute));
             txt_author.Content = detailResponse.creatorName;
             txt_content.Content = detailResponse.description;
             txt_title.Content = detailResponse.title;
         }
-        private void initCommentView()
-        {
-            lv_comment.Items.Clear();
-            for (int i = 0; i < comment.Count; i++)
-            {
-                lv_comment.Items.Add(new CommentItem(comment[i].userName, comment[i].comment, "2018-1-1", comment[i].userAvator));
-            }
-        }
         private void btn_subscribe_Click(object sender, RoutedEventArgs e)
         {
+            if(btn_subscribe.Content.ToString() == "未订阅")
+            {
+                SubscribeRequest subscribeRequest = new SubscribeRequest(calendarId);
+                RestfulClient<String> request = new RestfulClient<String>(subscribeRequest);
+                request.GetResponse();
+                btn_subscribe.Content = "已订阅";
+            }
+            else
+            {
+              UnsubscribeReques unsubscribeRequest = new UnsubscribeReques(calendarId);
+              RestfulClient<String> request = new RestfulClient<String>(unsubscribeRequest);
+              request.GetResponse();
+              btn_subscribe.Content = "未订阅";
+
+            }
         }
 
         private void btn_comment_Click(object sender, RoutedEventArgs e)
@@ -75,12 +97,8 @@ namespace today_wpf.pages
             {
                 AddCommentRequest request = new AddCommentRequest(calendarId, edit_content.Text);
                 RestfulClient<String> detailRestful = new RestfulClient<String>(request);
-                CommentModel model = new CommentModel();
-                model.userName = "用户名";
-                model.userAvator = "";
-                model.comment = edit_content.Text;
-                comment.Insert(0,model);
-                initCommentView();
+                detailRestful.GetResponse();
+                initCommentViewAsync();
             }
         }
     }

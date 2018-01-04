@@ -4,47 +4,54 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:today_wpf.custom"
-             mc:Ignorable="d" Height="406.848" Width="327.898">
-    <Grid Margin="0,0,0,-12">
-        <Border BorderBrush="#FFF8F9" BorderThickness="1" HorizontalAlignment="Left" Height="89" Margin="117,32,0,0" VerticalAlignment="Top" Width="89" CornerRadius="100">
-            <Border.Background>
-                <ImageBrush>
-                    <ImageBrush.ImageSource>
-                        <DrawingImage>
-                            <DrawingImage.Drawing>
-                                <ImageDrawing ImageSource="/today-wpf;component/resource/head.jpg" Rect="100,200,110,100"></ImageDrawing>
-                            </DrawingImage.Drawing>
-                        </DrawingImage>
-                    </ImageBrush.ImageSource>
-                </ImageBrush>
-            </Border.Background>
+             mc:Ignorable="d" Height="297.848" Width="702.898">
+    <Grid>
+        <Image Name="head" HorizontalAlignment="Left" Height="216" Margin="10,42,0,0" VerticalAlignment="Top" Width="216" Source="/today-wpf;component/resource/head.jpg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/today-wpf;component/resource/head.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label Name ="userName" Content="啦啦啦啦啦" HorizontalAlignment="Left" Margin="247,42,0,0" VerticalAlignment="Top" Height="34" Width="127" FontSize="20" Foreground="#FFF3F3F3"/>
+        <Border BorderBrush="#FF8D8B8B" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="231,87,0,0" VerticalAlignment="Top" Width="453" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
         </Border>
-        <TextBox Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="77,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" >
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                    <Setter Property="BorderBrush" Value="#c1d0dc"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <TextBox Name="txtUserName_c" HorizontalAlignment="Left" Height="27" Margin="77,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" >
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                    <Setter Property="BorderBrush" Value="#c1d0dc"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="140,142,0,0" Foreground="White" VerticalAlignment="Top" RenderTransformOrigin="0.103,0.13" Width="41" Height="24"/>
-        <TextBox x:Name="txtUserName_c_Copy" HorizontalAlignment="Left" Height="27" Margin="77,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" MaxLength="14" >
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                    <Setter Property="BorderBrush" Value="#c1d0dc"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <Button  BorderThickness="0" Background="#FFE32613" Name="btnLogin" Content="退出登录" Foreground="White"  HorizontalAlignment="Left" Margin="77,351,0,0" VerticalAlignment="Top" Width="169" FontSize="16" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">
+        <Label Name="createCount" Content="2" HorizontalAlignment="Left" Margin="258,98,0,0" VerticalAlignment="Top" Height="38" Width="45" FontSize="24" Foreground="#FFF7F5F5"/>
+        <Border BorderBrush="#FFC7C2C2" BorderThickness="1" HorizontalAlignment="Left" Height="82" Margin="315,90,0,0" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.567"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Label Content="创建" HorizontalAlignment="Left" Margin="247,136,0,0" VerticalAlignment="Top" Height="32" Width="56" FontSize="20" Foreground="#FFF7F5F5"/>
+        <Border BorderBrush="#FFC7C2C2" BorderThickness="1" HorizontalAlignment="Left" Height="82" Margin="417,88,0,0" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5"
+>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.567"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Label  Name="dCount" Content="8" HorizontalAlignment="Left" Margin="354,98,0,0" VerticalAlignment="Top" Height="38" Width="45" FontSize="24" Foreground="#FFF7F5F5"/>
+        <Label Content="订阅" HorizontalAlignment="Left" Margin="343,136,0,0" VerticalAlignment="Top" Height="32" Width="56" FontSize="20" Foreground="#FFF7F5F5"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="454,98,0,0" VerticalAlignment="Top" Height="38" Width="45" FontSize="24" Foreground="#FFF7F5F5"/>
+        <Label Content="点赞" HorizontalAlignment="Left" Margin="443,136,0,0" VerticalAlignment="Top" Height="32" Width="56" FontSize="20" Foreground="#FFF7F5F5"/>
+        <Label Content="个人介绍" HorizontalAlignment="Left" Margin="247,210,0,0" VerticalAlignment="Top" Height="28" Width="72" FontSize="14" Foreground="#FFF7F5F5"/>
+        <Label Name ="signature" Content="暂时没有介绍" HorizontalAlignment="Left" Margin="327,210,0,0" VerticalAlignment="Top" Height="28" Width="172" FontSize="14" Foreground="#FFF7F5F5"/>
+        <Button  BorderThickness="0" Background="#FFB4544A" Name="btnLogin" Content="编辑个人信息" Foreground="White"  HorizontalAlignment="Left" Margin="573,50,0,0" VerticalAlignment="Top" Width="105" FontSize="11" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#dd1144 "/>

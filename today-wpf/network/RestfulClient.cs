@@ -55,13 +55,13 @@ namespace today_wpf.network
         {
             try
             {
-                 IFormatter formatter = new BinaryFormatter();
-                 this.stream = new FileStream("./user.me", FileMode.Open,FileAccess.Read, FileShare.Read);
-                 var user = (UserLoginResponse)formatter.Deserialize(stream);
-                 stream.Close();
-                 request.AddHeader("token", user.token);
+               IFormatter formatter = new BinaryFormatter();
+                this.stream = new FileStream("./user.me", FileMode.Open,FileAccess.Read, FileShare.Read);
+                var user = (UserLoginResponse)formatter.Deserialize(stream);
+                stream.Close();
+                request.AddHeader("token", user.token);
             }
-            catch
+            catch(Exception e)
             {
                 stream.Close();
             }

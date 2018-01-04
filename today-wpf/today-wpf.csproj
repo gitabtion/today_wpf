@@ -181,6 +181,9 @@
     <Compile Include="CalendarPage.xaml.cs">
       <DependentUpon>CalendarPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="custom\EditUserInfo.xaml.cs">
+      <DependentUpon>EditUserInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="custom\forget.xaml.cs">
       <DependentUpon>forget.xaml</DependentUpon>
     </Compile>
@@ -200,16 +203,22 @@
       <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="dto\request\UserRegisterRequest.cs" />
+    <Compile Include="dto\response\CreatedResponse.cs" />
     <Compile Include="Env.cs" />
     <Compile Include="dto\request\BaseRequest.cs" />
     <Compile Include="dto\request\UserLoginRequest.cs" />
     <Compile Include="dto\response\BaseResponse.cs" />
     <Compile Include="dto\response\UserLoginResponse.cs" />
+    <Compile Include="model\CalDetail.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="network\RestfulClient.cs" />
     <Compile Include="detail\Detail.xaml.cs">
       <DependentUpon>Detail.xaml</DependentUpon>
     </Compile>
+    <Page Include="custom\EditUserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="custom\forget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

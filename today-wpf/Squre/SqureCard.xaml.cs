@@ -13,16 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace today_wpf
+namespace today_wpf.Squre
 {
     /// <summary>
-    /// DetailWindow.xaml 的交互逻辑
+    /// SqureCard.xaml 的交互逻辑
     /// </summary>
-    public partial class DetailWindow : UserControl
+    public partial class SqureCard : UserControl
     {
-        public DetailWindow()
+        public CalendarModel calendar { get; set; }
+        public SqureCard(CalendarModel calendarModel)
         {
             InitializeComponent();
+            calendar = calendarModel;
+            this.card_name.Content = calendar.name;
+            this.img_calendar.Source = new BitmapImage(new Uri(calendar.uri, UriKind.Relative));
         }
     }
 }

@@ -12,15 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using today_wpf.model;
 
-namespace today_wpf.detail
+namespace today_wpf.pages
 {
     /// <summary>
-    /// CommentWindow.xaml 的交互逻辑
+    /// CalendarActivity.xaml 的交互逻辑
     /// </summary>
-    public partial class CommentWindow : UserControl
+    public partial class CalendarActivity : UserControl
     {
-        public CommentWindow()
+        public CalendarActivity(Activity activity)
+        {
+            InitializeComponent();
+            this.activityName.Content = activity.title;
+            this.activityDtail.Content = activity.description;
+        }
+
+        public CalendarActivity()
         {
             InitializeComponent();
         }

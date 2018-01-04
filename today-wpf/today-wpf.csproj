@@ -196,24 +196,50 @@
     <Compile Include="custom\UserMain.xaml.cs">
       <DependentUpon>UserMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="detail\CommentWindow.xaml.cs">
-      <DependentUpon>CommentWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="detail\DetailWindow.xaml.cs">
-      <DependentUpon>DetailWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="dto\request\UserRegisterRequest.cs" />
-    <Compile Include="dto\response\CreatedResponse.cs" />
+    <Compile Include="dto\request\AddCommentRequest.cs" />
+    <Compile Include="dto\request\DetailRequest.cs" />
+    <Compile Include="dto\request\GetComment.cs" />
+    <Compile Include="dto\request\GetTodayById.cs" />
+    <Compile Include="dto\response\DetailResponse.cs" />
+    <Compile Include="dto\response\TodayResponse.cs" />
     <Compile Include="Env.cs" />
     <Compile Include="dto\request\BaseRequest.cs" />
     <Compile Include="dto\request\UserLoginRequest.cs" />
     <Compile Include="dto\response\BaseResponse.cs" />
     <Compile Include="dto\response\UserLoginResponse.cs" />
-    <Compile Include="model\CalDetail.cs" />
+    <Compile Include="main\MasterWindow.xaml.cs">
+      <DependentUpon>MasterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="main\NewMasterWindow.xaml.cs">
+      <DependentUpon>NewMasterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="model\Activity.cs" />
+    <Compile Include="model\CommentModel.cs" />
+    <Compile Include="model\Item.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="network\RestfulClient.cs" />
-    <Compile Include="detail\Detail.xaml.cs">
-      <DependentUpon>Detail.xaml</DependentUpon>
+    <Compile Include="pages\CommentItem.xaml.cs">
+      <DependentUpon>CommentItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DetailPage.xaml.cs">
+      <DependentUpon>DetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\CalendarActivity.xaml.cs">
+      <DependentUpon>CalendarActivity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\CalendarItem.xaml.cs">
+      <DependentUpon>CalendarItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\TodayPage.xaml.cs">
+      <DependentUpon>TodayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Squre\CalendarModel.cs" />
+    <Compile Include="Squre\SqureCard.xaml.cs">
+      <DependentUpon>SqureCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Squre\SqurePage.xaml.cs">
+      <DependentUpon>SqurePage.xaml</DependentUpon>
     </Compile>
     <Page Include="custom\EditUserInfo.xaml">
       <SubType>Designer</SubType>
@@ -235,14 +261,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="detail\CommentWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="detail\DetailWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -255,9 +273,33 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="detail\Detail.xaml">
+    <Page Include="main\MasterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\CommentItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="main\NewMasterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\CalendarActivity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\CalendarItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\TodayPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -268,6 +310,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="resource\NotifyIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Squre\SqureCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Squre\SqurePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

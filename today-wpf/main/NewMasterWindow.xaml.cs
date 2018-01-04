@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,33 +11,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
-using RestSharp;
-using today_wpf.dto.request;
-using today_wpf.dto.response;
-using today_wpf.network;
-namespace today_wpf
+
+namespace today_wpf.main
 {
     /// <summary>
-    /// Page1.xaml 的交互逻辑
+    /// NewMasterWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class Detail: MetroWindow
+    public partial class NewMasterWindow : MetroWindow
     {
-        public Detail()
+        public NewMasterWindow()
         {
             InitializeComponent();
         }
 
-        private void btn_comment_Click(object sender, RoutedEventArgs e)
+        private void TodayPage_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btn_detail_Click(object sender, RoutedEventArgs e)
+        private void SqurePage_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

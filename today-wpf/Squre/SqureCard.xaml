@@ -1,0 +1,15 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:today_wpf.Squre"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="today_wpf.Squre.SqureCard"
+             mc:Ignorable="d" 
+             d:DesignHeight="240" d:DesignWidth="160" Foreground="#00000000" BorderBrush="#00000000" OpacityMask="Black">
+    <Grid Background="White" Margin="8">
+        <Image x:Name="img_calendar" HorizontalAlignment="Left" Height="144" VerticalAlignment="Top" Width="144" Stretch="Fill"/>
+        <Label x:Name="card_name" Content="工作室老黄历" HorizontalAlignment="Center" Margin="0,160,0,0" VerticalAlignment="Center" FontFamily="Gadugi" FontSize="16"/>
+
+    </Grid>
+</UserControl>

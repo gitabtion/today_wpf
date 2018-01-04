@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,20 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
-using RestSharp;
-using today_wpf.dto.request;
-using today_wpf.dto.response;
-using today_wpf.network;
+using today_wpf.model;
 
-namespace today_wpf
+namespace today_wpf.pages
 {
-    public partial class CalendarPage : MetroWindow
+    /// <summary>
+    /// CalendarItem.xaml 的交互逻辑
+    /// </summary>
+    public partial class CalendarItem : UserControl
     {
-        public CalendarPage()
+        public CalendarItem(Item item)
         {
-
+            InitializeComponent();
+            this.title.Content = item.name;
+            this.detail.Content = item.getItemString();
         }
-
     }
 }

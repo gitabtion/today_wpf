@@ -14,7 +14,7 @@
         <Label Content="昵称 ：" HorizontalAlignment="Left" Margin="72,72,0,0" VerticalAlignment="Top" Height="30" Width="51" Foreground="#FFF9F9F9" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="144,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
         <Label Content="签名：" HorizontalAlignment="Left" Margin="72,120,0,0" VerticalAlignment="Top" Height="30" Width="51" Foreground="#FFF9F9F9" FontSize="16" RenderTransformOrigin="0.574,0.282"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,124,0,0" TextWrapping="Wrap" Text="这里什么都没有" VerticalAlignment="Top" Width="233"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
         <Label Content="密码：" HorizontalAlignment="Left" Margin="72,167,0,0" VerticalAlignment="Top" Height="30" Width="51" Foreground="#FFF9F9F9" FontSize="16" RenderTransformOrigin="0.574,0.282"/>
         <PasswordBox HorizontalAlignment="Left" Height="23" Margin="144,171,0,0" VerticalAlignment="Top" Width="233"/>
         <Button  BorderThickness="0" Background="#FF4A89B4" x:Name="btnLogin" Content="确认" Foreground="White"  HorizontalAlignment="Left" Margin="188,251,0,0" VerticalAlignment="Top" Width="105" FontSize="11" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">

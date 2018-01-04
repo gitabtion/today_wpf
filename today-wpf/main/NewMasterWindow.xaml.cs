@@ -34,5 +34,12 @@ namespace today_wpf.main
         {
             
         }
+        // 窗体关闭后
+        private void MetroWindow_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            MainWindow main = MainWindow.GetInstance();
+            main.Close();
+        }
     }
 }

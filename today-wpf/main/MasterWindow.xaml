@@ -6,12 +6,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Pages="clr-namespace:today_wpf.pages"
         mc:Ignorable="d"
-        Title="MasterWindow" Height="530" Width="930">
+        Title="Today" Height="530" Width="930">
     <Controls:MetroContentControl>
         <Grid>
             <Grid HorizontalAlignment="Left" Height="501" VerticalAlignment="Top" Width="127" Background="#FFD2D1D1" Margin="0,0,0,-0.333">
                 <Button Content="我的订阅" HorizontalAlignment="Left" Margin="27,194,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-                <Button Content="黄历广场" HorizontalAlignment="Left" Margin="27,305,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button Content="黄历广场" HorizontalAlignment="Left" Margin="27,317,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button Content="管理" HorizontalAlignment="Left" Margin="27,439,0,0" VerticalAlignment="Top" Width="75"/>
                 <Image HorizontalAlignment="Left" Height="111" VerticalAlignment="Top" Width="127" Source="/today-wpf;component/resource/head.jpg" Stretch="Fill"/>
             </Grid>

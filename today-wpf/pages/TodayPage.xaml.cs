@@ -50,6 +50,7 @@ namespace today_wpf.pages
     
             tResponse = tList[currentIndex];
 
+            this.dateLabel.Content = DateTime.Now.ToString("yyyy-MM-dd");
             this.nameLabel.Content = tResponse.calendarName;
             this.imageLabel.Source = new BitmapImage(new Uri(tResponse.calendarPicture, UriKind.Absolute));
             clear();

@@ -1,25 +1,25 @@
 ﻿<Controls:MetroWindow
-    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" 
-    x:Class="today_wpf.main.NewMasterWindow"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" x:Class="today_wpf.main.NewMasterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Pages="clr-namespace:today_wpf.pages"
     xmlns:Pages1="clr-namespace:today_wpf.Squre"
+    xmlns:Pages2="clr-namespace:today_wpf.custom"
     mc:Ignorable="d"
         Title="Today" Height="640" Width="1000">
     <Grid>
 
         <TabControl HorizontalAlignment="Left" VerticalAlignment="Top" Width="1000" Foreground="{x:Null}">
-            <TabItem Header="黄历首页" Margin="211,2,-211,-2" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <TabItem Header="黄历首页" Margin="204,2,-204,-2" HorizontalAlignment="Left" VerticalAlignment="Top" >
                 <Controls:MetroContentControl>
                     <Pages:TodayPage Margin="0,0,0,0" Grid.RowSpan="2" Loaded="TodayPage_Loaded"></Pages:TodayPage>
                 </Controls:MetroContentControl>
             </TabItem>
 
 
-            <TabItem x:Name="squreTab" Header="黄历广场" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,4,-247,-4" Loaded="squreTab_Loaded">
+            <TabItem x:Name="squreTab" Header="黄历广场" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,4,-252,-4" Loaded="squreTab_Loaded">
                 <Controls:MetroContentControl>
 
                     <Grid >
@@ -36,25 +36,24 @@
                 </Controls:MetroContentControl>
             </TabItem>
 
-            <TabItem Header="我的订阅" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="307,4,-307,-4">
+            <TabItem Header="我的订阅" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,4,-300,-4" Loaded="TabItem_Loaded">
+                <Grid >
+                    <Pages1:SubscribePage x:Name="subPage" Margin="0,0,0,0" Width="692" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}">
 
+
+                    </Pages1:SubscribePage>
+                    <Pages:DetailPage x:Name="subDetailPage" Margin="0,0,0,0" Width="800" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}">
+
+                    </Pages:DetailPage>
+                </Grid>
             </TabItem>
 
+            <TabItem Header="个人设置" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="348,4,-348,-4">
+                <Pages2:userInfo Margin="0,0,0,0" Width="800" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}"></Pages2:userInfo>
+            </TabItem>
 
         </TabControl>
         
-        <Border BorderBrush="#FFF8F9"  BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="730,2,0,0" VerticalAlignment="Top" Width="44" CornerRadius="44">
-            <Border.Background>
-                <ImageBrush>
-                    <ImageBrush.ImageSource>
-                        <DrawingImage>
-                            <DrawingImage.Drawing>
-                                <ImageDrawing x:Name="img_header" ImageSource="/resource/head.jpg" Rect="100,200,110,100"></ImageDrawing>
-                            </DrawingImage.Drawing>
-                        </DrawingImage>
-                    </ImageBrush.ImageSource>
-                </ImageBrush>
-            </Border.Background>
-        </Border>
+        
     </Grid>
 </Controls:MetroWindow>

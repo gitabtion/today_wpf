@@ -226,7 +226,6 @@
     <Compile Include="pages\CalendarActivity.xaml.cs">
       <DependentUpon>CalendarActivity.xaml</DependentUpon>
     </Compile>
-    
     <Compile Include="Squre\CalendarModel.cs" />
     <Compile Include="Squre\SqureCard.xaml.cs">
       <DependentUpon>SqureCard.xaml</DependentUpon>
@@ -238,6 +237,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="Squre\SubscribePage.xaml.cs">
+      <DependentUpon>SubscribePage.xaml</DependentUpon>
+    </Compile>
     <Page Include="custom\forget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -317,6 +319,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Squre\SqurePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Squre\SubscribePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

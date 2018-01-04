@@ -174,6 +174,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="custom\EditUserInfo.xaml.cs">
+      <DependentUpon>EditUserInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="custom\forget.xaml.cs">
       <DependentUpon>forget.xaml</DependentUpon>
     </Compile>
@@ -194,6 +197,7 @@
     <Compile Include="dto\request\UserRegisterRequest.cs" />
     <Compile Include="dto\request\GetSubScribedToday.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
+    <Compile Include="dto\response\createdResponse.cs" />
     <Compile Include="dto\response\DetailResponse.cs" />
     <Compile Include="dto\response\TodayResponse.cs" />
     <Compile Include="Env.cs" />
@@ -208,6 +212,7 @@
       <DependentUpon>NewMasterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="model\Activity.cs" />
+    <Compile Include="model\CalDetail.cs" />
     <Compile Include="model\CommentModel.cs" />
     <Compile Include="model\Item.cs" />
     <Compile Include="model\User.cs" />
@@ -228,6 +233,10 @@
     <Compile Include="Squre\SqurePage.xaml.cs">
       <DependentUpon>SqurePage.xaml</DependentUpon>
     </Compile>
+    <Page Include="custom\EditUserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Compile Include="Squre\SubscribePage.xaml.cs">
       <DependentUpon>SubscribePage.xaml</DependentUpon>
     </Compile>

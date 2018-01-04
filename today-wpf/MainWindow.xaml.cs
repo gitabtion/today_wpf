@@ -164,9 +164,8 @@ namespace today_wpf
                 formatter.Serialize(stream, response);
                 stream.Close();
 
-                Window window = new NewMasterWindow();
-                window.Show();
-                this.Close();
+                this.Hide();
+                new NewMasterWindow().Show();
             }
 
         }

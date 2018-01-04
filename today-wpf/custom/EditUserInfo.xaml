@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="today_wpf.custom.EditUserInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:today_wpf.custom"
+             mc:Ignorable="d" Height="297.848" Width="702.898">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="181" Margin="512,43,0,0" VerticalAlignment="Top" Width="181" Source="/today-wpf;component/resource/head.jpg" RenderTransformOrigin="0.49,0.63">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/today-wpf;component/resource/head.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label Content="昵称 ：" HorizontalAlignment="Left" Margin="72,72,0,0" VerticalAlignment="Top" Height="30" Width="51" Foreground="#FFF9F9F9" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
+        <Label Content="签名：" HorizontalAlignment="Left" Margin="72,120,0,0" VerticalAlignment="Top" Height="30" Width="51" Foreground="#FFF9F9F9" FontSize="16" RenderTransformOrigin="0.574,0.282"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,124,0,0" TextWrapping="Wrap" Text="这里什么都没有" VerticalAlignment="Top" Width="233"/>
+        <Label Content="密码：" HorizontalAlignment="Left" Margin="72,167,0,0" VerticalAlignment="Top" Height="30" Width="51" Foreground="#FFF9F9F9" FontSize="16" RenderTransformOrigin="0.574,0.282"/>
+        <PasswordBox HorizontalAlignment="Left" Height="23" Margin="144,171,0,0" VerticalAlignment="Top" Width="233"/>
+        <Button  BorderThickness="0" Background="#FF4A89B4" x:Name="btnLogin" Content="确认" Foreground="White"  HorizontalAlignment="Left" Margin="188,251,0,0" VerticalAlignment="Top" Width="105" FontSize="11" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#dd1144 "/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF0B73BD"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button  BorderThickness="0" Background="#FF9E9291" x:Name="btnLogin_Copy" Content="取消" Foreground="White"  HorizontalAlignment="Left" Margin="380,251,0,0" VerticalAlignment="Top" Width="105" FontSize="11" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#dd1144 "/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF0B73BD"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</UserControl>

@@ -7,7 +7,8 @@ using today_wpf.model;
 
 namespace today_wpf.dto.response
 {
-    public class UserLoginResponse
+    [Serializable]
+    class UserLoginResponse
     {
         public String token { get; set; }
         public User user { get; set; }

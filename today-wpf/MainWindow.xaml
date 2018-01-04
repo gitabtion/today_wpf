@@ -6,12 +6,9 @@
         GlowBrush="{DynamicResource AccentColorBrush}" Loaded="MetroWindow_Loaded" >
     <Controls:MetroContentControl>
         <Grid Margin="-12,0,-10,-5" Height="308" VerticalAlignment="Top">
-        <Grid.Background>
-            <ImageBrush/>
-        </Grid.Background>
 
 
-        <Button  BorderThickness="0" Background="#138CE3" Name="btnLogin" Content="登  录" Foreground="White"  HorizontalAlignment="Left" Margin="153,267,0,0" VerticalAlignment="Top" Width="169" FontSize="16" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">
+            <Button  BorderThickness="0" Background="#138CE3" Name="btnLogin" Content="登  录" Foreground="White"  HorizontalAlignment="Left" Margin="153,267,0,0" VerticalAlignment="Top" Width="169" FontSize="16" RenderTransformOrigin="0.489,1.234" Click="Button_Click" Height="26" FontFamily="Nirmala UI">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#dd1144 "/>
@@ -24,7 +21,7 @@
             </Button.Style>
         </Button>
 
-        <Image Height="169" VerticalAlignment="Top" Source=".\resource\622896.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" Width="446" />
+        <Image Height="169" VerticalAlignment="Top" Source=".\resource\622896.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" Width="446" Margin="0,0,-10,0" />
 
         <Button Content="注册账号" HorizontalAlignment="Left" Margin="342,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.067" Height="19" Width="71" FontSize="14" Click="Button_Click_1" >
             <Button.Template>

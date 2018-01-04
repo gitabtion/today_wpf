@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace today_wpf.model
 {
-    public class User
+    [Serializable]
+    class User
     {
         public String name { get; set; }
         public String signature { get; set; }

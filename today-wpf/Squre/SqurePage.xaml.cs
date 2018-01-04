@@ -38,11 +38,22 @@ namespace today_wpf.Squre
             this.recommendList.Items.Add(squreCard4);
             this.recommendList.Items.Add(squreCard5);
 
-            for(int i = 0; i < 20; i++)
+            for (int i = 0; i < 20; i++)
             {
                 this.allList.Items.Add(new SqureCard(calendarModel1));
             }
-            
+
+        }
+
+        private void recommendList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SqureCard squre = recommendList.SelectedItem as SqureCard;
+            Console.WriteLine(squre.calendar.name);
+        }
+
+        private void allList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SqureCard squre = recommendList.SelectedItem as SqureCard;
         }
     }
 }

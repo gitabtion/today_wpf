@@ -32,7 +32,7 @@ namespace today_wpf.main
 
         private void SqurePage_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

@@ -20,11 +20,12 @@ namespace today_wpf.Squre
     /// </summary>
     public partial class SqureCard : UserControl
     {
+        public CalendarModel calendar { get; set; }
         public SqureCard(CalendarModel calendarModel)
         {
             InitializeComponent();
-            CalendarModel calendar = calendarModel;
-            this.Name = calendar.name;
+            calendar = calendarModel;
+            this.card_name.Content = calendar.name;
             this.img_calendar.Source = new BitmapImage(new Uri(calendar.uri, UriKind.Relative));
         }
     }

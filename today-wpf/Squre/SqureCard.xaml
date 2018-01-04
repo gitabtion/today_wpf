@@ -9,7 +9,7 @@
              d:DesignHeight="240" d:DesignWidth="160" Foreground="#00000000" BorderBrush="#00000000" OpacityMask="Black">
     <Grid Background="White" Margin="8">
         <Image x:Name="img_calendar" HorizontalAlignment="Left" Height="144" VerticalAlignment="Top" Width="144" Stretch="Fill"/>
-        <Label Content="工作室老黄历" HorizontalAlignment="Center" Margin="0,160,0,0" VerticalAlignment="Center" FontFamily="Gadugi" FontSize="16"/>
+        <Label x:Name="card_name" Content="工作室老黄历" HorizontalAlignment="Center" Margin="0,160,0,0" VerticalAlignment="Center" FontFamily="Gadugi" FontSize="16"/>
 
     </Grid>
 </UserControl>

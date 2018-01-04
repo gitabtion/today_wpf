@@ -12,23 +12,30 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using today_wpf.model;
 
 namespace today_wpf.pages
 {
     /// <summary>
-    /// CalendarActivity.xaml 的交互逻辑
+    /// CommentItem.xaml 的交互逻辑
     /// </summary>
-    public partial class CalendarActivity : UserControl
+    public partial class CommentItem : UserControl
     {
-        public CalendarActivity(Activity activity)
+        public CommentItem(string name ,string content,string date, string avatar) 
         {
-            InitializeComponent();
-            this.activityName.Content = activity.title;
-            this.activityDtail.Content = activity.description;
-        }
 
-        public CalendarActivity()
+            InitializeComponent();
+     
+            tv_content.Content = content;
+            tv_data .Content= date;
+            tv_name.Content = name;
+            if (!avatar.Equals("")&&avatar!=null)
+            {
+                img_avatar.Source = new BitmapImage(new Uri(avatar, UriKind.Relative));
+
+            }
+
+        }
+        public CommentItem()
         {
             InitializeComponent();
         }

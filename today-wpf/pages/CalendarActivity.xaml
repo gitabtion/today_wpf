@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:today_wpf.pages"
              mc:Ignorable="d" Height="41.928" Width="272.993">
     <Grid>
-        <Label x:Name="activityName" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Width="74" FontWeight="Bold" Margin="0,-2,0,0"/>
-        <Label x:Name="activityDtail" Content="Label" HorizontalAlignment="Left" Margin="0,18,0,0" VerticalAlignment="Top" Width="253" Foreground="#FF7D6D6D"/>
+        <Label x:Name="activityName" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Width="221" FontWeight="Bold" Margin="0,-2,0,0"/>
+        <Label x:Name="activityDtail" Content="Label" HorizontalAlignment="Left" Margin="0,18,0,0" VerticalAlignment="Top" Width="263" Foreground="#FF7D6D6D"/>
 
     </Grid>
 </UserControl>

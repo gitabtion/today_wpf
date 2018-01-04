@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="today_wpf.pages.DetailPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:today_wpf.pages"
+             mc:Ignorable="d" 
+             Height="530" Width="800" Background="WhiteSmoke">
+    <Grid HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="810" Margin="0,0,-10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="img_picture" HorizontalAlignment="Left" Height="192" Margin="18,42,0,0" VerticalAlignment="Top" Width="221" Source="/today-wpf;component/resource/622896.jpg" RenderTransformOrigin="0.689,0.655" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.178"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="标题" HorizontalAlignment="Left" Margin="247,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.161,0.158" Height="36" Width="62" FontSize="20"/>
+        <Label Content="作者" HorizontalAlignment="Left" Margin="247,166,0,0" VerticalAlignment="Top" Height="37" Width="66" FontSize="20"/>
+        <Label x:Name="txt_title" Content="Label" HorizontalAlignment="Left" Margin="319,138,0,0" VerticalAlignment="Top" Height="32" Width="232"/>
+        <Label x:Name="txt_author" Content="Label" HorizontalAlignment="Left" Margin="319,175,0,0" VerticalAlignment="Top" Height="28" Width="232"/>
+        <Border BorderBrush="Red" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="5,263,0,0" VerticalAlignment="Top"  Background="Red" Width="546"/>
+        <Label Content="评论" HorizontalAlignment="Left" Margin="11,233,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="1.015,0.576" Height="26" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.188"/>
+                    <TranslateTransform X="-0.007" Y="0.073"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <ListView x:Name="lv_comment" Background="{x:Null}" Margin="0,264,259,0" Height="175" VerticalAlignment="Top"/>
+        <Button x:Name="btn_comment" Content="评论" HorizontalAlignment="Left" Margin="486,444,0,0" Width="65" FontSize="16" FontWeight="Normal" RenderTransformOrigin="-0.151,0.515" Height="40" VerticalAlignment="Top" Click="btn_comment_Click"/>
+        <TextBox x:Name="edit_content" HorizontalAlignment="Left" Height="32" Margin="5,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="18" Width="476"/>
+        <Label Content="简介" Margin="642,10,0,0" VerticalAlignment="Top" Width="77" Height="43" FontWeight="Bold" FontFamily="Mistral" FontSize="24" TextOptions.TextHintingMode="Fixed" HorizontalAlignment="Left"/>
+        <Border BorderBrush="#FFBC4444" BorderThickness="1" HorizontalAlignment="Left" Height="425" Margin="556,51,0,0" VerticalAlignment="Top" Width="1"/>
+        <Label x:Name="txt_content" Content="这是一个很有趣的黄历，" HorizontalAlignment="Left" Margin="562,51,0,0" VerticalAlignment="Top" Width="246" Height="462" Background="{x:Null}" Foreground="#FF7A7A7A" FontSize="16" FontWeight="ExtraLight" />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="1009,288,-299,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btn_subscribe" Content="订阅" HorizontalAlignment="Left" Margin="247,208,0,0" VerticalAlignment="Top" Width="75" Click="btn_subscribe_Click"/>
+    </Grid>
+
+</UserControl>

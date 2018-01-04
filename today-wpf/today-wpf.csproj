@@ -194,7 +194,6 @@
     <Compile Include="dto\request\UserRegisterRequest.cs" />
     <Compile Include="dto\request\GetSubScribedToday.cs" />
     <Compile Include="dto\request\GetTodayById.cs" />
-    
     <Compile Include="dto\response\DetailResponse.cs" />
     <Compile Include="dto\response\TodayResponse.cs" />
     <Compile Include="Env.cs" />
@@ -222,13 +221,15 @@
     <Compile Include="pages\CalendarActivity.xaml.cs">
       <DependentUpon>CalendarActivity.xaml</DependentUpon>
     </Compile>
-    
     <Compile Include="Squre\CalendarModel.cs" />
     <Compile Include="Squre\SqureCard.xaml.cs">
       <DependentUpon>SqureCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Squre\SqurePage.xaml.cs">
       <DependentUpon>SqurePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Squre\SubscribePage.xaml.cs">
+      <DependentUpon>SubscribePage.xaml</DependentUpon>
     </Compile>
     <Page Include="custom\forget.xaml">
       <SubType>Designer</SubType>
@@ -309,6 +310,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Squre\SqurePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Squre\SubscribePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

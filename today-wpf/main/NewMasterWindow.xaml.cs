@@ -34,7 +34,8 @@ namespace today_wpf.main
             FileStream stream = new FileStream("./user.me", FileMode.Open, FileAccess.Read, FileShare.Read);
             var user = (UserLoginResponse)formatter.Deserialize(stream);
             stream.Close();
-            img_header.ImageSource = new BitmapImage(new Uri(user.user.avatar, UriKind.Absolute));
+            
+            
         }
 
         private void TodayPage_Loaded(object sender, RoutedEventArgs e)
@@ -49,6 +50,18 @@ namespace today_wpf.main
             squrePage.window = this;
             squrePage.Visibility = Visibility.Visible;
             detailPage.Visibility = Visibility.Hidden;
+        }
+
+        private void header_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void TabItem_Loaded(object sender, RoutedEventArgs e)
+        {
+            subPage.window = this;
+            subPage.Visibility = Visibility.Visible;
+            subDetailPage.Visibility = Visibility.Hidden;
         }
     }
 }

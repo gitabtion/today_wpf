@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using today_wpf.main;
 using today_wpf.network;
+using today_wpf.pages;
 
 namespace today_wpf.Squre
 {
@@ -23,24 +25,34 @@ namespace today_wpf.Squre
     {
         public List<CalendarModel> recommendListData { get; set; }
         public List<CalendarModel> allListData { get; set; }
+        public NewMasterWindow window { get; set; }
         public SqurePage()
         {
             InitializeComponent();
             loadDataAsync();
 
-            
-
         }
 
+        
         private void recommendList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SqureCard squre = recommendList.SelectedItem as SqureCard;
-            Console.WriteLine(squre.calendar.title);
+            
+            window.detailPage.loadDetail(squre.calendar.id, squre.calendar.isSubcribed);
+            
+            this.Visibility = Visibility.Hidden;
+            window.detailPage.Visibility = Visibility.Visible;
         }
 
         private void allList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SqureCard squre = recommendList.SelectedItem as SqureCard;
+
+            window.detailPage.loadDetail(squre.calendar.id, squre.calendar.isSubcribed);
+
+            this.Visibility = Visibility.Hidden;
+            window.detailPage.Visibility = Visibility.Visible;
+
         }
         private async void loadDataAsync()
         {

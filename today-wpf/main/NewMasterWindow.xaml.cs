@@ -34,5 +34,12 @@ namespace today_wpf.main
         }
 
         
+
+        private void squreTab_Loaded(object sender, RoutedEventArgs e)
+        {
+            squrePage.window = this;
+            squrePage.Visibility = Visibility.Visible;
+            detailPage.Visibility = Visibility.Hidden;
+        }
     }
 }

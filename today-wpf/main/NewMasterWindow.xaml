@@ -9,22 +9,36 @@
     mc:Ignorable="d"
         Title="MasterWindow" Height="640" Width="1000">
     <Grid>
+        
         <TabControl HorizontalAlignment="Left" VerticalAlignment="Top" Width="1000" Foreground="{x:Null}">
             <TabItem Header="黄历首页" Margin="221,2,-221,-2" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <Controls:MetroContentControl>
                 <Pages:TodayPage Margin="0,0,0,0" Grid.RowSpan="2" Loaded="TodayPage_Loaded"></Pages:TodayPage>
+                </Controls:MetroContentControl>
             </TabItem>
 
 
-            <TabItem Header="黄历广场" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="281,4,-281,-4">
-                <Grid Background="#FFD6D6D6" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Pages1:SqurePage Margin="139,9,-831,-9" Width="692" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}"/>
-                </Grid>
+            <TabItem x:Name="squreTab" Header="黄历广场" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="281,4,-281,-4" Loaded="squreTab_Loaded">
+                <Controls:MetroContentControl>
+
+                    <Grid >
+                        <Pages1:SqurePage x:Name="squrePage" Margin="0,0,0,0" Width="692" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}">
+
+
+                        </Pages1:SqurePage>
+                        <Pages:DetailPage x:Name="detailPage" Margin="0,0,0,0" Width="692" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{x:Null}">
+                            
+                        </Pages:DetailPage>
+                    </Grid>
+                    
+
+                </Controls:MetroContentControl>
             </TabItem>
 
             <TabItem Header="我的订阅" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,4,-339,-4">
-                <Grid Background="#FFD6D6D6" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                
             </TabItem>
-            <ProgressBar Width="100"/>
+
         </TabControl>
     </Grid>
 </Controls:MetroWindow>
